@@ -2441,7 +2441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83faa7b6e0d07446a6f58d1b6261265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tempo: 168
+  Tempo: 192
   hasStarted: 0
 --- !u!4 &1842005885
 Transform:
