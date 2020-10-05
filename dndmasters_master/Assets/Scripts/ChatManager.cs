@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Chat;
 using ExitGames.Client.Photon;
+using UnityEngine.SceneManagement;
 
 public class ChatManager : MonoBehaviour, IChatClientListener
 {
@@ -33,6 +34,17 @@ public class ChatManager : MonoBehaviour, IChatClientListener
         if(chatClient == null) return;
 
         if (textInput.text != "" && Input.GetKey(KeyCode.Return)) {
+            chatClient.PublishMessage( "global", textInput.text );
+            textInput.text = "";
+
+            StartCoroutine(CoFocusAgain());
+        }
+    }
+
+    public void SendOnClick() {
+        if(chatClient == null) return;
+
+        if (textInput.text != "") {
             chatClient.PublishMessage( "global", textInput.text );
             textInput.text = "";
 
@@ -124,6 +136,10 @@ public class ChatManager : MonoBehaviour, IChatClientListener
         if (chatClient != null) {
             chatClient.Disconnect();
         }
+    }
+
+    public void BackToInn() {
+        SceneManager.LoadScene( "InnScene" );
     }
 
 }

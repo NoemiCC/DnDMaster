@@ -46,17 +46,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d32564f312d8b4f8b6d6ecc72ed4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Bard
+  unitName: Druid
   unitLevel: 10
   damage: 10
   maxHP: 10
   currentHP: 10
   currentPosition: 8
   facing: left
-  hability1: Adaggio
-  hability2: Allegro
-  hability3: Giocoso
-  hability4: "R\xE9quiem"
+  hability1: "Ra\xEDces atrapadoras"
+  hability2: "Nube t\xF3xica"
+  hability3: "Semilla de curaci\xF3n"
+  hability4: "Invocaci\xF3n"
 --- !u!61 &3920688104398916041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f3a5ea5ace79004eba15d892dcc01a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae0702a1b8f5e4f23a4b7bf1d9585bf4, type: 3}
   m_Color: {r: 0.5849056, g: 0.24003203, b: 0.25410852, a: 1}
   m_FlipX: 0
   m_FlipY: 0
