@@ -67,7 +67,7 @@ public class BattleHUD : MonoBehaviour
 
         if (text.text == "Bloqueo de Chi")
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("MonkGame");
         }
     }
 
