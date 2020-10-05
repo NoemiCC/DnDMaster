@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bad
   - Point
+  - Timer
   layers:
   - Default
   - TransparentFX

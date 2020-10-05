@@ -1985,7 +1985,6 @@ MonoBehaviour:
   endTitle: {fileID: 2139763044}
   endPoints: {fileID: 1338430899}
   maxPoints: 5
-  timerBar: {fileID: 1983421016}
   maxTime: 5
 --- !u!61 &1817837552
 BoxCollider2D:
@@ -2161,7 +2160,7 @@ GameObject:
   - component: {fileID: 1983421016}
   m_Layer: 5
   m_Name: Timer
-  m_TagString: Untagged
+  m_TagString: Timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

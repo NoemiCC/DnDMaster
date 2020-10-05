@@ -79,6 +79,3 @@ public class Player : MonoBehaviour
     }
 
 }
-
-// PlayerPrefs.GetString("username", "Anon");
-// PlayerPrefs.SetString( "username", nameInput.text );
