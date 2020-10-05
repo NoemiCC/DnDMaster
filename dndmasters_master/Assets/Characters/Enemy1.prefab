@@ -56,7 +56,7 @@ MonoBehaviour:
   hability1: Adaggio
   hability2: Allegro
   hability3: Giocoso
-  hability4: Requiem
+  hability4: "R\xE9quiem"
 --- !u!61 &5848124578313045041
 BoxCollider2D:
   m_ObjectHideFlags: 0
