@@ -79,6 +79,7 @@ public class CodeLock : MonoBehaviour
     void Open()
     {
         Debug.Log("Yeah!");
+        PlayerPrefs.SetFloat( "minigameScore", 10 );
     }
 
     public void SetValue(string value)

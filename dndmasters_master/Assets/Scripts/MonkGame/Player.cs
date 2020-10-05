@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
             endTitle.text = "Se acabo el tiempo";
             endPoints.text += "0";
             gameOver = true;
-            PlayerPrefs.SetInt( "minigameScore", 0 );
         }
     }
 
@@ -58,13 +57,13 @@ public class Player : MonoBehaviour
             points++;
 
             if (points >= maxPoints) {
+                PlayerPrefs.SetFloat( "minigameScore", 10 );
                 gameCanvas.SetActive( false );
                 endCanvas.SetActive( true );
 
                 endTitle.text = "Lo lograste!";
-                endPoints.text += "100";
+                endPoints.text += "10";
                 gameOver = true;
-                PlayerPrefs.SetInt( "minigameScore", 100 );
             }
 
         } else if (collision.gameObject.tag == "Bad" && !gameOver) {
@@ -74,7 +73,6 @@ public class Player : MonoBehaviour
             endTitle.text = "Has presionado un punto equivocado";
             endPoints.text += "0";
             gameOver = true;
-            PlayerPrefs.SetInt( "minigameScore", 0 );
         }
     }
 
