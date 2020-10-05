@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public InputField nameInput;
-
+    
     public void LoadScene( string sceneName ) {
 
         if ( nameInput.text != "" ) {
