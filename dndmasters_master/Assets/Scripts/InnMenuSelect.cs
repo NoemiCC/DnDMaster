@@ -8,7 +8,7 @@ public class InnMenuSelect : MonoBehaviour
 {
     Text moneyText;
     public GameObject money;
-    int moneyVal;
+    // int moneyVal;
 
     void Start() {
         PlayerPrefs.SetFloat( "playerLife", 30 );
@@ -16,9 +16,9 @@ public class InnMenuSelect : MonoBehaviour
         PlayerPrefs.SetFloat( "minigameScore", 0 );
         PlayerPrefs.SetString("startingBattle", "true");
 
-        moneyVal = PlayerPrefs.GetInt("money", 0);
+        // moneyVal = PlayerPrefs.GetInt("money", 0);
 
-        moneyText = money.GetComponent<Text>();
+        // moneyText = money.GetComponent<Text>();
         // moneyText.text = "Dinero: $0"; // + moneyVal.ToString();
     }
     public void LoadScene( string sceneName ) {
