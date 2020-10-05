@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
 	public GameObject chatMenu;
 	public GameObject dialogueBox;
 	public GameObject finalMenu;
+	public GameObject selectFirst_text;
 
 	private Queue<string> sentences;
 
@@ -18,6 +19,31 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
 		sentences = new Queue<string>();
+		if (Globals.start_welcome == 0)
+		{
+			dialogueBox.SetActive(true);
+		}
+		if (Globals.start_welcome == 1)
+		{
+			ShowAll();
+			ShowCharacterMenu();
+			ShowChatMenu();
+			AllowButtons();
+		}
+    }
+
+    public void SelectFirst()
+    {
+
+		if (Globals.characters_selected == 0)
+    	{
+    		selectFirst_text.SetActive(true);
+    	}
+    	else
+    	{	
+    		InnMenuSelect sn = gameObject.GetComponent<InnMenuSelect>();
+			sn.LoadScene("Campo_batalla");
+    	}
     }
 
     public void StartDialogue (Dialogue dialogue)

@@ -2,20 +2,20 @@
 
 public class OnHoverButton : MonoBehaviour
 {
-	public GameObject arrowObject;
+	public GameObject visibleObject;
 
 	void Start()
 	{
-	    arrowObject.SetActive(false);
+	    visibleObject.SetActive(false);
 	}
 
     void OnMouseOver()
     {
-	    arrowObject.SetActive(true);
+	    visibleObject.SetActive(true);
     }
 
     void OnMouseExit()
     {
-	    arrowObject.SetActive(false);
+	    visibleObject.SetActive(false);
     }
 }
