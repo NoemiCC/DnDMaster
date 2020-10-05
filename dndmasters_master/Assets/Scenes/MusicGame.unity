@@ -589,6 +589,8 @@ MonoBehaviour:
   scoreText: {fileID: 2108594781}
   gameText: {fileID: 68936909}
   instructions: {fileID: 1414802407}
+  endCanvas: {fileID: 872652813}
+  noteHolder: {fileID: 1842005883}
 --- !u!4 &469407103
 Transform:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ public class BattleSystem : MonoBehaviour
                 pointsTxt.text = "Has ganado $0";
             } else {
                 resultTxt.text = "Felicidades! Has ganado";
-                pointsTxt.text += "Has ganado $100";
+                pointsTxt.text = "Has ganado $100";
             }
             endCanvas.SetActive( true );
             hudCanvas.SetActive( false );
