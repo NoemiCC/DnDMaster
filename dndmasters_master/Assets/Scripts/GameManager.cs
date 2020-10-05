@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
             theBS.hasStarted = false;
             gameText.text = "GANASTE";
             PlayerPrefs.SetFloat( "minigameScore", 10 );
+            SceneManager.LoadScene("Campo_batalla");
         }
     }
 
@@ -66,5 +68,6 @@ public class GameManager : MonoBehaviour
         theBS.hasStarted = false;
         gameText.text = "PERDISTE";
         gameOver = true;
+        SceneManager.LoadScene("Campo_batalla");
     }
 }
