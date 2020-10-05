@@ -19,39 +19,49 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameText;
     public GameObject instructions;
+    public GameObject endCanvas;
+    public GameObject noteHolder;
     void Start()
     {
         instance = this;
         scoreText.text = "Quedan: " + notesLeft;
         gameText.text = "Requiem";
+        endCanvas.SetActive( false );
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!startPlaying)
-        {
-            if(!gameOver)
-            {
-                if(Input.anyKeyDown)
-                {
-                    instructions.SetActive(false);
-                    startPlaying = true;
-                    theBS.hasStarted = true;
-                    gameText.text = "";
-                    theMusic.Play();
-                }
+        if (endCanvas.activeSelf) {
+            if (Input.anyKeyDown) {
+                SceneManager.LoadScene("Campo_batalla");
             }
-        
-        }
-        if(notesLeft <= 0)
-        {
-            startPlaying = false;
-            theMusic.Stop();
-            theBS.hasStarted = false;
-            gameText.text = "GANASTE";
-            PlayerPrefs.SetFloat( "minigameScore", 10 );
-            SceneManager.LoadScene("Campo_batalla");
+        } else {
+            if(!startPlaying)
+            {
+                if(!gameOver)
+                {
+                    if(Input.anyKeyDown)
+                    {
+                        instructions.SetActive(false);
+                        startPlaying = true;
+                        theBS.hasStarted = true;
+                        gameText.text = "";
+                        theMusic.Play();
+                    }
+                }
+            
+            }
+            if(notesLeft <= 0)
+            {
+                startPlaying = false;
+                theMusic.Stop();
+                theBS.hasStarted = false;
+                gameText.text = "GANASTE";
+                PlayerPrefs.SetFloat( "minigameScore", 10 );
+                endCanvas.SetActive( true );
+                noteHolder.SetActive( false );
+            }
         }
     }
 
@@ -68,6 +78,7 @@ public class GameManager : MonoBehaviour
         theBS.hasStarted = false;
         gameText.text = "PERDISTE";
         gameOver = true;
-        SceneManager.LoadScene("Campo_batalla");
+        endCanvas.SetActive( true );
+        noteHolder.SetActive( false );
     }
 }
