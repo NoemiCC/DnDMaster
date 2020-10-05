@@ -11,14 +11,12 @@ public class ChatManager : MonoBehaviour, IChatClientListener
     public Text messagesText;
     public InputField textInput;
     string username;
-    // [SerializeField] string userID = "";
-
     // Start is called before the first frame update
     void Start()
     {
         username = PlayerPrefs.GetString("username", "Anon");
         chatClient = new ChatClient(this);
-        chatClient.Connect(PhotonNetwork.PhotonServerSettings.AppID, "1.0", new Photon.Chat.AuthenticationValues(username));
+        chatClient.Connect(PhotonNetwork.PhotonServerSettings.ChatAppID, "1.0", new Photon.Chat.AuthenticationValues(username));
     }
 
     // Update is called once per frame
