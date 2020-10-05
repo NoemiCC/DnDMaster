@@ -46,17 +46,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d32564f312d8b4f8b6d6ecc72ed4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Archer
+  unitName: Druid
   unitLevel: 10
   damage: 10
   maxHP: 10
   currentHP: 10
   currentPosition: 1
   facing: right
-  hability1: Disparo lejano
-  hability2: Flecha de fuego
-  hability3: Flecha helada
-  hability4: En el blanco
+  hability1: "Ra\xEDces atrapadoras"
+  hability2: "Nube t\xF3xica"
+  hability3: "Semilla de curaci\xF3n"
+  hability4: "Invocaci\xF3n"
 --- !u!61 &5565685361292907145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,9 +171,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e1efb06d1fb03426987ce343dfe424d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae0702a1b8f5e4f23a4b7bf1d9585bf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.6666667, y: 2.6666667}
