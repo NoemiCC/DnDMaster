@@ -69,6 +69,11 @@ public class BattleHUD : MonoBehaviour
         {
             SceneManager.LoadScene("MonkGame");
         }
+
+        if (text.text == "Invocación")
+        {
+            SceneManager.LoadScene("CrackTheCode");
+        }
     }
 
     public void SetHUD (Unit unit)
