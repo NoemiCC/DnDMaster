@@ -33,7 +33,6 @@ public class CodeManager : MonoBehaviour
                     instructions.SetActive(false);
                     startPlaying = true;
                     gameText.text = "";
-                    Debug.Log("Start");
                 }
             }
         

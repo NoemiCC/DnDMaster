@@ -45,6 +45,7 @@ public class BattleSystem : MonoBehaviour
     public Text resultTxt;
     public Text pointsTxt;
     float maxLife = 30;
+    int money;
     public GameObject pLifeBar;
     public GameObject eLifeBar;
     Image pLifeBarImage;
@@ -80,6 +81,10 @@ public class BattleSystem : MonoBehaviour
         }
 
         if (endCanvas.activeSelf && Input.anyKeyDown) {
+            money = PlayerPrefs.GetInt("money", 0);
+            if (eLifeBarImage.fillAmount == 0) {
+                PlayerPrefs.SetInt("money", money + 100);
+            }
             SceneManager.LoadScene("InnScene");
         }
 
