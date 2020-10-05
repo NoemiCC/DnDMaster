@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Instancia a las unidades sobre el terreno, actualiza los valores del HUD y controla la batalla
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -33,26 +35,85 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
+    float playerLife;
+    float enemyLife;
+    float minigame;
+    string startingBattle;
+
+    public GameObject hudCanvas;
+    public GameObject endCanvas;
+    public Text resultTxt;
+    public Text pointsTxt;
+    float maxLife = 30;
+    int money;
+    public GameObject pLifeBar;
+    public GameObject eLifeBar;
+    Image pLifeBarImage;
+    Image eLifeBarImage;
+
+
     void Start()
     {
+        endCanvas.SetActive( false );
+        hudCanvas.SetActive( true );
+        SetLifeBars();
+
         state = BattleState.START;
         SetupBattle();
-        
+    }
+    void OnDestroy() {
+        PlayerPrefs.SetFloat("enemyLife", enemyLife);
+        PlayerPrefs.SetFloat("playerLife", playerLife);
+        PlayerPrefs.SetFloat( "minigameScore", 0 );
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0) {
+            if (pLifeBarImage.fillAmount == 0) {
+                resultTxt.text = "Que lastima, has perdido";
+                pointsTxt.text = "Has ganado $0";
+            } else {
+                resultTxt.text = "Felicidades! Has ganado";
+                pointsTxt.text += "Has ganado $100";
+            }
+            endCanvas.SetActive( true );
+            hudCanvas.SetActive( false );
+        }
+
+        if (endCanvas.activeSelf && Input.anyKeyDown) {
+            money = PlayerPrefs.GetInt("money", 0);
+            if (eLifeBarImage.fillAmount == 0) {
+                PlayerPrefs.SetInt("money", money + 100);
+            }
+            SceneManager.LoadScene("InnScene");
+        }
+
+        if (Input.GetMouseButtonDown(0) && !endCanvas.activeSelf)
         {
-
             Vector3 mousePos;
-
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-         
-
         }
     }
 
+    void SetLifeBars() {
+        startingBattle = PlayerPrefs.GetString("startingBattle");
+        minigame = PlayerPrefs.GetFloat("minigameScore");
+        enemyLife = PlayerPrefs.GetFloat("enemyLife") - minigame;
+        
+        if (startingBattle == "true") {
+            PlayerPrefs.SetString("startingBattle", "false");
+            playerLife = PlayerPrefs.GetFloat("playerLife");
+        } else {
+            playerLife = PlayerPrefs.GetFloat("playerLife") - Random.Range (0, 2) * 10;
+        }
+        
+        pLifeBarImage = pLifeBar.GetComponent<Image>();
+        eLifeBarImage = eLifeBar.GetComponent<Image>();
+
+        pLifeBarImage.fillAmount = playerLife / maxLife;
+        eLifeBarImage.fillAmount = enemyLife / maxLife;
+    }
     void SetupBattle() 
     {
         GameObject ally1GO = Instantiate(ally1prefab, ally1Tile);

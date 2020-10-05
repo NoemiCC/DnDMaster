@@ -25,8 +25,6 @@ public class NoteObject : MonoBehaviour
         }else
         {
             GameManager.instance.NoteMissed();
-            Debug.Log(gameObject.name);
-            Debug.Log(other.name);
         }
 
     }

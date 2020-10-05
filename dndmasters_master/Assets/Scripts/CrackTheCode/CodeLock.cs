@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 
 public class CodeLock : MonoBehaviour
@@ -72,6 +73,7 @@ public class CodeLock : MonoBehaviour
                 Debug.Log("¡Perdiste!");
                 // Terminar juego y volver a batalla
                 CodeManager.instance.tries = 5;
+                SceneManager.LoadScene("Campo_batalla");
             }
         }
     }
@@ -79,6 +81,8 @@ public class CodeLock : MonoBehaviour
     void Open()
     {
         Debug.Log("Yeah!");
+        PlayerPrefs.SetFloat( "minigameScore", 10 );
+        SceneManager.LoadScene("Campo_batalla");
     }
 
     public void SetValue(string value)

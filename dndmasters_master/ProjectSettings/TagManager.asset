@@ -7,6 +7,7 @@ TagManager:
   - Bad
   - Point
   - Timer
+  - Money
   layers:
   - Default
   - TransparentFX

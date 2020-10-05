@@ -49,20 +49,18 @@ public class GameManager : MonoBehaviour
             theMusic.Stop();
             theBS.hasStarted = false;
             gameText.text = "GANASTE";
+            PlayerPrefs.SetFloat( "minigameScore", 10 );
         }
     }
 
     public void NoteHit()
     {
-        
-        Debug.Log("Hit!");
         notesLeft -= 1;
         scoreText.text = "Quedan: " + notesLeft;
     }
 
     public void NoteMissed()
     {
-        Debug.Log("Miss!");
         startPlaying = false;
         theMusic.Stop();
         theBS.hasStarted = false;
