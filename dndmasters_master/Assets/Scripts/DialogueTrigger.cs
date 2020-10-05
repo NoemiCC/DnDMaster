@@ -8,7 +8,15 @@ public class DialogueTrigger : MonoBehaviour {
 
 	public void TriggerDialogue ()
 	{
-		FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+		if (Globals.start_welcome == 0)
+		{
+			FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+		}
+
+		Debug.Log(Globals.start_welcome);
+		// FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+		
+		Globals.start_welcome = Globals.start_welcome = 1;
 	}
 
 }
