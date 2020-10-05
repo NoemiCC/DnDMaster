@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChatScene.unity
     guid: 617b78acb2b28b4468f37b348906ebf0
+  - enabled: 1
+    path: Assets/Scenes/MonkGame.unity
+    guid: 44429c3e3118d4529a2f14d11bcfac14
+  - enabled: 1
+    path: Assets/Scenes/MusicGame.unity
+    guid: cfe8ba2d4ac8a1e46b30886a180d6436
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
