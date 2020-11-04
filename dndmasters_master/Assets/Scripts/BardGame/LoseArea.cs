@@ -18,6 +18,6 @@ public class LoseArea : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         Debug.Log("Ups");
-        GameManager.instance.NoteMissed();
+        //GameManager.instance.NoteMissed();
     }
 }
