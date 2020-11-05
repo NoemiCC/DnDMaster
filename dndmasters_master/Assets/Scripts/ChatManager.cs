@@ -17,7 +17,7 @@ public class ChatManager : MonoBehaviour, IChatClientListener
     {
         username = PlayerPrefs.GetString("username", "Anon");
         chatClient = new ChatClient(this);
-        chatClient.Connect(PhotonNetwork.PhotonServerSettings.ChatAppID, "1.0", new Photon.Chat.AuthenticationValues(username));
+        chatClient.Connect("e3ec6f73-ce73-4f2a-9f5c-e80d60c17d61", "1.0", new Photon.Chat.AuthenticationValues(username));   
     }
 
     // Update is called once per frame
@@ -141,5 +141,4 @@ public class ChatManager : MonoBehaviour, IChatClientListener
     public void BackToInn() {
         SceneManager.LoadScene( "InnScene" );
     }
-
 }
