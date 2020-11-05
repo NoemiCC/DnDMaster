@@ -22,7 +22,7 @@ public class NoteObject : MonoBehaviour
         {
             gameObject.SetActive(false);
             GameManager.instance.NoteHit();
-        }else
+        }else if(other.name == "LoseArea")
         {
             GameManager.instance.NoteMissed();
         }

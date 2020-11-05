@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-
+using System;
 
 public class CodeLock : MonoBehaviour
 {
     int codeLength;
     int placeInCode;
-    public string code = "";
+    public string code;
     public string attemptedCode;
+    public int game = 0;
     public GameObject log;
     public Button button01;
     public Button button02;
@@ -28,6 +29,13 @@ public class CodeLock : MonoBehaviour
     private void Start() 
     {
         codeLength = code.Length;
+        System.Random rnd = new System.Random();
+        int number = 10;
+        double floor = Math.Pow(number, codeLength-1);
+        double roof = Math.Pow(number, codeLength);
+        int randomCode  = rnd.Next(Convert.ToInt32(floor), Convert.ToInt32(roof-1));
+        code = randomCode.ToString();
+        Debug.Log(code);
         Button btn01 = button01.GetComponent<Button>();
         Button btn02 = button02.GetComponent<Button>();
         Button btn03 = button03.GetComponent<Button>();
@@ -68,6 +76,9 @@ public class CodeLock : MonoBehaviour
         {
             Debug.Log("wrong code");
             CodeManager.instance.tries -= 1;
+
+            // Colorear runas 
+
             if(CodeManager.instance.tries <= 0)
             {
                 Debug.Log("¡Perdiste!");
@@ -93,45 +104,126 @@ public class CodeLock : MonoBehaviour
         {
         rows.Add(child.gameObject);
         }
-        placeInCode++;
         SpriteRenderer spriteRenderer = rune.GetComponent<SpriteRenderer>();
+        Debug.Log("place" + placeInCode);
         if(int.Parse(value) == 1)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite01);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite01Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite01Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite01Wrong);               
+            }
 
         }else if (int.Parse(value) == 2)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite02);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite02Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite02Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite02Wrong);               
+            }
 
         }else if (int.Parse(value) == 3)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite03);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite03Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite03Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite03Wrong);               
+            }
         }
         else if (int.Parse(value) == 4)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite04);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite04Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite04Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite04Wrong);               
+            }
         }
         else if (int.Parse(value) == 5)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite05);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite05Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite05Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite05Wrong);               
+            }
         }
         else if (int.Parse(value) == 6)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite06);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite06Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite06Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite06Wrong);               
+            }
         }
         else if (int.Parse(value) == 7)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite07);
+                    if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite07Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite07Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite07Wrong);               
+            }
         }
         else if (int.Parse(value) == 8)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite08);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite08Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite08Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite08Wrong);               
+            }
         }
         else if (int.Parse(value) == 9)
         {
-        spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite09);
+            if(value == Char.ToString(code[placeInCode]))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite09Right);
+            }else if(code.Contains(value))
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite09Search);
+            }else 
+            {
+                spriteRenderer.sprite = (rune.GetComponent<ChangeSprite>().sprite09Wrong);               
+            }
         }
-
+        placeInCode++;
         if(placeInCode <= codeLength)
         {
             attemptedCode += value;

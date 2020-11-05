@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public int maxPoints = 5;
 
     Image timerBar;
-    public float maxTime = 5f;
+    public float maxTime = 10f;
     float timeLeft;
     bool gameOver = false;
     
