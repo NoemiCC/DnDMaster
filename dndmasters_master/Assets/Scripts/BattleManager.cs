@@ -12,7 +12,13 @@ public class BattleManager : MonoBehaviourPunCallbacks
 
     [PunRPC]
     void ReconMinigame(string what, string how) {
-        if(what == "Réquiem") { SceneManager.LoadScene( "MusicGame" ); }
+        if (what == "Réquiem") { 
+            PlayerPrefs.SetInt("game", 0);
+            SceneManager.LoadScene( "MusicGame" ); 
+        } else if (what == "Adaggio") { 
+            PlayerPrefs.SetInt("game", 1);
+            SceneManager.LoadScene( "MusicGame" ); 
+        }
 
         if (what == "Bloqueo de Chi") { SceneManager.LoadScene("MonkGame"); }
 
