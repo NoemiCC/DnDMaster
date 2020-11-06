@@ -8600,8 +8600,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701534789}
-  - component: {fileID: 1701534790}
   - component: {fileID: 1701534791}
+  - component: {fileID: 1701534790}
   m_Layer: 0
   m_Name: PhotonView
   m_TagString: Untagged
@@ -8642,7 +8642,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents: []
-  viewIdField: 0
+  viewIdField: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1701534791
