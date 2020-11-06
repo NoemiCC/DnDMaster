@@ -1182,7 +1182,7 @@ MonoBehaviour:
   pointsTxt: {fileID: 114290143}
   pLifeBar: {fileID: 781035913}
   eLifeBar: {fileID: 1432054936}
-  PV: {fileID: 0}
+  PV: {fileID: 1784757654}
 --- !u!4 &551359258
 Transform:
   m_ObjectHideFlags: 0

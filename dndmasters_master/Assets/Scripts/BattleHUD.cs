@@ -22,19 +22,25 @@ public class BattleHUD : MonoBehaviour
     public Text hability4text;
 
     Boolean toggle;
+    string myTurn;
     
     public PhotonView PV;
 
     void Start()
     {
+        myTurn = PlayerPrefs.GetString("myTurn", "true");
+        if (myTurn == "true") { toggle = true; }
+        else { toggle = false; }
+
         toggle = !toggle;
+
+        if (toggle == true) { PlayerPrefs.SetString("myTurn", "true"); }
+        else { PlayerPrefs.SetString("myTurn", "false"); }
 
         Button btn1 = hability1.GetComponent<Button>();
         Button btn2 = hability2.GetComponent<Button>();
         Button btn3 = hability3.GetComponent<Button>();
         Button btn4 = hability4.GetComponent<Button>();
-
-
 
         btn1.onClick.AddListener(TaskOnClick1);
         btn2.onClick.AddListener(TaskOnClick2);
@@ -70,22 +76,16 @@ public class BattleHUD : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            toggle = !toggle;
-
-            if (toggle) {
-                hability1.GetComponent<Button>().interactable = true;
-                hability2.GetComponent<Button>().interactable = true;
-                hability3.GetComponent<Button>().interactable = true;
-                hability4.GetComponent<Button>().interactable = true;
-            } else {
-                hability1.GetComponent<Button>().interactable = false;
-                hability2.GetComponent<Button>().interactable = false;
-                hability3.GetComponent<Button>().interactable = false;
-                hability4.GetComponent<Button>().interactable = false;
-            }
-                
+        if (toggle) {
+            hability1.GetComponent<Button>().interactable = true;
+            hability2.GetComponent<Button>().interactable = true;
+            hability3.GetComponent<Button>().interactable = true;
+            hability4.GetComponent<Button>().interactable = true;
+        } else {
+            hability1.GetComponent<Button>().interactable = false;
+            hability2.GetComponent<Button>().interactable = false;
+            hability3.GetComponent<Button>().interactable = false;
+            hability4.GetComponent<Button>().interactable = false;
         }
     }
 }
