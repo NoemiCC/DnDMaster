@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 // Instancia a las unidades sobre el terreno, actualiza los valores del HUD y controla la batalla
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -51,14 +52,16 @@ public class BattleSystem : MonoBehaviour
     Image pLifeBarImage;
     Image eLifeBarImage;
 
+    
+
 
     void Start()
     {
         endCanvas.SetActive( false );
         hudCanvas.SetActive( true );
         SetLifeBars();
-
-        state = BattleState.START;
+        
+        state = BattleState.PLAYERTURN;
         SetupBattle();
     }
     void OnDestroy() {
@@ -78,6 +81,8 @@ public class BattleSystem : MonoBehaviour
             }
             endCanvas.SetActive( true );
             hudCanvas.SetActive( false );
+
+            
         }
 
         if (endCanvas.activeSelf && Input.anyKeyDown) {
@@ -94,6 +99,7 @@ public class BattleSystem : MonoBehaviour
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         }
+        
     }
 
     void SetLifeBars() {
@@ -105,7 +111,7 @@ public class BattleSystem : MonoBehaviour
             PlayerPrefs.SetString("startingBattle", "false");
             playerLife = PlayerPrefs.GetFloat("playerLife");
         } else {
-            playerLife = PlayerPrefs.GetFloat("playerLife") - Random.Range (0, 2) * 10;
+            playerLife = PlayerPrefs.GetFloat("playerLife") - UnityEngine.Random.Range (0, 2) * 10;
         }
         
         pLifeBarImage = pLifeBar.GetComponent<Image>();
@@ -114,6 +120,8 @@ public class BattleSystem : MonoBehaviour
         pLifeBarImage.fillAmount = playerLife / maxLife;
         eLifeBarImage.fillAmount = enemyLife / maxLife;
     }
+
+
     void SetupBattle() 
     {
         GameObject ally1GO = Instantiate(ally1prefab, ally1Tile);
@@ -175,4 +183,5 @@ public class BattleSystem : MonoBehaviour
         enemy3Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
 
     }
+
 }
