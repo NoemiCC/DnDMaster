@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Photon.Pun;
 
 
 public class GameManager : MonoBehaviour
@@ -33,11 +34,15 @@ public class GameManager : MonoBehaviour
     public GameObject noteHolder1;
     public GameObject noteHolder2;
     private int score = 0;
+
+    public PhotonView PV;
+
     void Start()
     {
         instance = this;
         scoreText.text = "Score: " + score;
         gameText.text = "Requiem";
+        game = PlayerPrefs.GetInt("game", 0);
         endCanvas.SetActive( false );
     }
 
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
                 notesController01.hasStarted = false;
                 gameText.text = "Fin del juego";
                 PlayerPrefs.SetFloat( "minigameScore", score);
+                PV.RPC("UpdatePoints", RpcTarget.Others, (float)score);
                 endCanvas.SetActive( true );
                 noteHolder1.SetActive( false );
                 noteHolder2.SetActive( false );
@@ -106,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void NoteHit()
     {
-        Debug.Log(notesLeft);
+        // Debug.Log(notesLeft);
         notesLeft -= 1;
         if(game==0)
         {
@@ -120,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void NoteMissed()
     {
-        Debug.Log(notesLeft);
+        // Debug.Log(notesLeft);
         notesLeft -= 1;
         if(game==1)
         {

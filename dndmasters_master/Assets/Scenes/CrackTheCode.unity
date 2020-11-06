@@ -530,6 +530,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &85231294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2422,6 +2423,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &400261236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2562,6 +2564,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &403710156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2703,6 +2706,7 @@ MonoBehaviour:
   vainillaSprites: []
   memorySprite: 0
 --- !u!212 &452691034
+
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3238,6 +3242,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &629627479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3461,6 +3466,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &639852028
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3601,6 +3607,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &640122058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3786,7 +3793,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 170.408}
   m_SizeDelta: {x: 5.254236, y: 0.69297504}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &774581409
+
+--- !u!1 &880780119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880780120}
+  - component: {fileID: 880780121}
+  m_Layer: 5
+  m_Name: Pad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &880780120
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880780119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1531693852}
+  - {fileID: 1746923461}
+  - {fileID: 1334388895}
+  - {fileID: 1321734325}
+  - {fileID: 127050511}
+  - {fileID: 535857965}
+  - {fileID: 1628125084}
+  - {fileID: 381828829}
+  - {fileID: 159127746}
+  m_Father: {fileID: 1768157649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &880780121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880780119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6159fe0369c35c644b30ccde2feed162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  code: 123
+  attemptedCode: 
+  game: 0
+  log: {fileID: 1706196397}
+  button01: {fileID: 1531693853}
+  button02: {fileID: 1746923462}
+  button03: {fileID: 1334388896}
+  button04: {fileID: 1321734326}
+  button05: {fileID: 127050512}
+  button06: {fileID: 535857966}
+  button07: {fileID: 1628125085}
+  button08: {fileID: 381828830}
+  button09: {fileID: 159127747}
+  rows: []
+  sprites: []
+  PV: {fileID: 1384964529}
+--- !u!1 &924751418
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3876,6 +3957,7 @@ MonoBehaviour:
   vainillaSprites: []
   memorySprite: 0
 --- !u!212 &774581412
+
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4302,6 +4384,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &969204766
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4442,6 +4525,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &992787859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6155,6 +6239,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &1344395537
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6206,6 +6291,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1384964526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1384964527}
+  - component: {fileID: 1384964528}
+  - component: {fileID: 1384964529}
+  m_Layer: 0
+  m_Name: PhotonView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1384964527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384964526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384964528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384964526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fbcc10208a3e34b8d5cfc86316a8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384964529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384964526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1397994396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6706,6 +6857,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &1540892928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6846,6 +6998,7 @@ MonoBehaviour:
   sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
   vainillaSprites: []
   memorySprite: 0
+
 --- !u!212 &1582351032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7879,6 +8032,7 @@ MonoBehaviour:
   vainillaSprites: []
   memorySprite: 0
 --- !u!212 &1921778627
+
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8019,6 +8173,7 @@ MonoBehaviour:
   vainillaSprites: []
   memorySprite: 0
 --- !u!212 &1931635502
+
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

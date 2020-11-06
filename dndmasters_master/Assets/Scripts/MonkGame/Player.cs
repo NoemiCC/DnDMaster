@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class Player : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class Player : MonoBehaviour
     public int maxPoints = 5;
 
     Image timerBar;
-    public float maxTime = 10f;
+    public float maxTime;
     float timeLeft;
+    int game;
     bool gameOver = false;
+
+    public PhotonView PV;
     
 
     private void Awake() {
@@ -27,6 +31,12 @@ public class Player : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+        game = PlayerPrefs.GetInt("game", 0);
+        if (game == 0) { maxTime = 10f; maxPoints = 5; }
+        else if (game == 1) { maxTime = 8f; maxPoints = 6; }
+        else if (game == 2) { maxTime = 7f; maxPoints = 7; }
+        else if (game == 3) { maxTime = 6f; maxPoints = 8; }
+
         timerBar = GameObject.FindGameObjectWithTag("Timer").GetComponent<Image>();
         timeLeft = maxTime;
     }
@@ -42,12 +52,14 @@ public class Player : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
         } else if (!gameOver) {
+            PlayerPrefs.SetFloat( "minigameScore", 0 );
             gameCanvas.SetActive( false );
             endCanvas.SetActive( true );
 
             endTitle.text = "Se acabo el tiempo";
             endPoints.text += "0";
             gameOver = true;
+            PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
         }
     }
 
@@ -64,15 +76,18 @@ public class Player : MonoBehaviour
                 endTitle.text = "Lo lograste!";
                 endPoints.text += "10";
                 gameOver = true;
+                PV.RPC("UpdatePoints", RpcTarget.Others, (float)10);
             }
 
         } else if (collision.gameObject.tag == "Bad" && !gameOver) {
+            PlayerPrefs.SetFloat( "minigameScore", 0 );
             gameCanvas.SetActive( false );
             endCanvas.SetActive( true );
 
             endTitle.text = "Has presionado un punto equivocado";
             endPoints.text += "0";
             gameOver = true;
+            PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
         }
     }
 
