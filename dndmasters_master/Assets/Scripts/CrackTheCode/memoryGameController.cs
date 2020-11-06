@@ -5,11 +5,16 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using Photon.Pun;
+
 
 public class memoryGameController : MonoBehaviour
 {
     public int runes;
     public int score = 0;
+    public PhotonView PV;
+
     public List<GameObject> rows = new List<GameObject>();
     public int selected = 0;
     public List<GameObject> runesSelected = new List<GameObject>();
@@ -72,6 +77,9 @@ public class memoryGameController : MonoBehaviour
             if(score == runes/2)
             {
                 gameText.text = "Terminó el juego";
+                PlayerPrefs.SetFloat( "minigameScore", score );
+                PV.RPC("UpdatePoints", RpcTarget.Others, score);
+                SceneManager.LoadScene("Campo_batalla");
             }
         }else {
             Debug.Log("No son iguales D:");

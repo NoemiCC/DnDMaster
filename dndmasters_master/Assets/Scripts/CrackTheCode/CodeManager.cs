@@ -14,18 +14,30 @@ public class CodeManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameText;
     public GameObject instructions;
+    public TextMeshProUGUI mainInstructions;
+
+    public TextMeshProUGUI gameInstructions;
+
     void Start()
     {
         int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
         instance = this;
+        mainInstructions.text = "Presiona cualquier tecla para empezar.";
         if(gameMode==0)
         {
         scoreText.text = "Quedan:"; 
         gameText.text = "Conjuración";
+        gameInstructions.text = "Haz click en runas de la izquierda\n para probar combinaciones.\n" + 
+                                "El color de la runa seleccionada\nte indicará si acertaste, fallaste\n o estás cerca.\n\n" +
+                                "Descifra el código para ganar!";
+
         }else if(gameMode==1)
         {
         scoreText.text = "Puntaje:"; 
         gameText.text = "Alquimia";
+        gameInstructions.text = "Haz click en las runas\n para darlas vuelta.\n" + 
+                                "¡Encuentra las parejas para ganar!\n\n" + 
+                                "Importante: jugar lento para evitar bugs.";
         }
     }
 
