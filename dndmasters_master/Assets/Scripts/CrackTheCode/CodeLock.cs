@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System;
+using Photon.Pun;
 
 public class CodeLock : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class CodeLock : MonoBehaviour
     public Button button09;
     public List<GameObject> rows = new List<GameObject>();
     public List<GameObject> sprites = new List<GameObject>();
+
+    public PhotonView PV;
 
     private void Start() 
     {
@@ -84,6 +87,7 @@ public class CodeLock : MonoBehaviour
                 Debug.Log("¡Perdiste!");
                 // Terminar juego y volver a batalla
                 CodeManager.instance.tries = 5;
+                PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
                 SceneManager.LoadScene("Campo_batalla");
             }
         }
@@ -93,6 +97,7 @@ public class CodeLock : MonoBehaviour
     {
         Debug.Log("Yeah!");
         PlayerPrefs.SetFloat( "minigameScore", 10 );
+        PV.RPC("UpdatePoints", RpcTarget.Others, (float)10);
         SceneManager.LoadScene("Campo_batalla");
     }
 

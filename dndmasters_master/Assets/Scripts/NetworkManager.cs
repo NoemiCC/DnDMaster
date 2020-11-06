@@ -4,9 +4,11 @@ using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public PhotonView PV;
+
     // Start is called before the first frame update
     void Start() {
-        Connect();
+        if (!PhotonNetwork.IsConnected) { Connect(); }
     }
 
     public void Connect() {
@@ -14,7 +16,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnConnectedToMaster() {
-        Debug.Log("Connected to server");
         Play();
     }
 
@@ -23,14 +24,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message) {
-        Debug.Log("Tried to join a room and failed");
         PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = 2 });
     }
 
     public override void OnJoinedRoom() {
-        Debug.Log("Joined a room - yay!");
+        PV.RPC("UpdatePlayerCount", RpcTarget.All);
     }
 
-    // Update is called once per frame
-    // void Update() {}
+    public override void OnLeftRoom()   {
+        PV.RPC("UpdatePlayerCount", RpcTarget.All);
+    }
 }

@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 // Instancia a las unidades sobre el terreno, actualiza los valores del HUD y controla la batalla
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
@@ -37,11 +38,15 @@ public class BattleSystem : MonoBehaviour
 
     float playerLife;
     float enemyLife;
-    float minigame;
+    float myScore;
+    float enemyScore;
     string startingBattle;
+    int damage = 10;
 
     public GameObject hudCanvas;
+    public GameObject lifeCanvas;
     public GameObject endCanvas;
+    public GameObject waitCanvas;
     public Text resultTxt;
     public Text pointsTxt;
     float maxLife = 30;
@@ -50,69 +55,115 @@ public class BattleSystem : MonoBehaviour
     public GameObject eLifeBar;
     Image pLifeBarImage;
     Image eLifeBarImage;
+    public PhotonView PV;
 
 
     void Start()
     {
         endCanvas.SetActive( false );
-        hudCanvas.SetActive( true );
-        SetLifeBars();
+        lifeCanvas.SetActive( false );
+        hudCanvas.SetActive( false );
 
-        state = BattleState.START;
-        SetupBattle();
+        pLifeBarImage = pLifeBar.GetComponent<Image>();
+        eLifeBarImage = eLifeBar.GetComponent<Image>();
     }
     void OnDestroy() {
         PlayerPrefs.SetFloat("enemyLife", enemyLife);
         PlayerPrefs.SetFloat("playerLife", playerLife);
-        PlayerPrefs.SetFloat( "minigameScore", 0 );
+        PlayerPrefs.SetFloat( "myScoreScore", -1 );
+        PlayerPrefs.SetFloat( "enemyScore", -1 );
     }
     private void Update()
     {
-        if (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0) {
-            if (pLifeBarImage.fillAmount == 0) {
-                resultTxt.text = "Que lastima, has perdido";
-                pointsTxt.text = "Has ganado $0";
-            } else {
-                resultTxt.text = "Felicidades! Has ganado";
-                pointsTxt.text = "Has ganado $100";
+        if (Globals.playerCount == 2) {
+            SetUpGame();
+            
+            if (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0) {
+                if (pLifeBarImage.fillAmount == 0) {
+                    resultTxt.text = "Que lastima, has perdido";
+                    pointsTxt.text = "Has ganado $0";
+                } else {
+                    resultTxt.text = "Felicidades! Has ganado";
+                    pointsTxt.text = "Has ganado $100";
+                }
+                endCanvas.SetActive( true );
+                hudCanvas.SetActive( false );
             }
-            endCanvas.SetActive( true );
-            hudCanvas.SetActive( false );
-        }
 
-        if (endCanvas.activeSelf && Input.anyKeyDown) {
-            money = PlayerPrefs.GetInt("money", 0);
-            if (eLifeBarImage.fillAmount == 0) {
-                PlayerPrefs.SetInt("money", money + 100);
+            if (endCanvas.activeSelf && Input.anyKeyDown) {
+                money = PlayerPrefs.GetInt("money", 0);
+                if (eLifeBarImage.fillAmount == 0) {
+                    PlayerPrefs.SetInt("money", money + 100);
+                }
+                SceneManager.LoadScene("InnScene");
             }
-            SceneManager.LoadScene("InnScene");
-        }
 
-        if (Input.GetMouseButtonDown(0) && !endCanvas.activeSelf)
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+            if (Input.GetMouseButtonDown(0) && !endCanvas.activeSelf)
+            {
+                Vector3 mousePos;
+                mousePos = Input.mousePosition;
+                mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+            }
+        }
+    }
+
+    void SetUpGame() {
+        if (!hudCanvas.activeSelf && !endCanvas.activeSelf) {
+            Debug.Log("Change to game");
+            waitCanvas.SetActive( false );
+            lifeCanvas.SetActive( true );
+            hudCanvas.SetActive( true );
+
+            SetLifeBars();
+            state = BattleState.START;
+            SetupBattle();
         }
     }
 
     void SetLifeBars() {
         startingBattle = PlayerPrefs.GetString("startingBattle");
-        minigame = PlayerPrefs.GetFloat("minigameScore");
-        enemyLife = PlayerPrefs.GetFloat("enemyLife") - minigame;
-        
+        myScore = PlayerPrefs.GetFloat("minigameScore", -1);
+        enemyScore = PlayerPrefs.GetFloat("enemyScore", -1);
+        Debug.Log("Scores: " + myScore + " - " + enemyScore);
+
         if (startingBattle == "true") {
             PlayerPrefs.SetString("startingBattle", "false");
             playerLife = PlayerPrefs.GetFloat("playerLife");
-        } else {
-            playerLife = PlayerPrefs.GetFloat("playerLife") - Random.Range (0, 2) * 10;
-        }
-        
-        pLifeBarImage = pLifeBar.GetComponent<Image>();
-        eLifeBarImage = eLifeBar.GetComponent<Image>();
+            enemyLife = PlayerPrefs.GetFloat("enemyLife");
 
-        pLifeBarImage.fillAmount = playerLife / maxLife;
-        eLifeBarImage.fillAmount = enemyLife / maxLife;
+            pLifeBarImage.fillAmount = playerLife / maxLife;
+            eLifeBarImage.fillAmount = enemyLife / maxLife;
+        } else if (enemyScore == (float)-1 && myScore != -1) {
+            Debug.Log("Waiting");
+            hudCanvas.SetActive( false );
+            waitCanvas.SetActive( true );
+        } else if (myScore != -1 && enemyScore != -1) { // Cambiar las barras de vida
+            Debug.Log("Change life");
+            waitCanvas.SetActive( false );
+            hudCanvas.SetActive( true );
+
+            if (myScore == enemyScore) {
+                return;
+            }
+            else if (myScore > enemyScore) {
+                // Si es mi turno, yo gane -> enemyLife -= damage
+                enemyLife = PlayerPrefs.GetFloat("enemyLife") - damage;
+                playerLife = PlayerPrefs.GetFloat("playerLife");
+                // Si no es mi turno, yo perdi -> playerLife -= damage/2
+                // playerLife = PlayerPrefs.GetFloat("playerLife") - damage/(float)2;
+            }
+            else if (myScore < enemyScore) {
+                // Si no es mi turno, yo gane -> enemyLife -= damage
+                // enemyLife = PlayerPrefs.GetFloat("enemyLife") - damage;
+                // Si es mi turno, yo perdi -> playerLife -= damage/2
+                enemyLife = PlayerPrefs.GetFloat("enemyLife");
+                playerLife = PlayerPrefs.GetFloat("playerLife") - damage/(float)2;
+            }
+
+            Debug.Log(playerLife + " - " + enemyLife);
+            pLifeBarImage.fillAmount = playerLife / maxLife;
+            eLifeBarImage.fillAmount = enemyLife / maxLife;
+        }
     }
     void SetupBattle() 
     {

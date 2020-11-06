@@ -13,7 +13,8 @@ public class InnMenuSelect : MonoBehaviour
     void Start() {
         PlayerPrefs.SetFloat( "playerLife", 30 );
         PlayerPrefs.SetFloat( "enemyLife", 30 );
-        PlayerPrefs.SetFloat( "minigameScore", 0 );
+        PlayerPrefs.SetFloat( "minigameScore", -1 );
+        PlayerPrefs.SetFloat( "enemyScore", -1 );
         PlayerPrefs.SetString("startingBattle", "true");
 
         // moneyVal = PlayerPrefs.GetInt("money", 0);
