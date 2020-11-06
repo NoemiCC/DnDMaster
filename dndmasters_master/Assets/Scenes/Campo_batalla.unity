@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleHUD: {fileID: 1230214537}
   ally1prefab: {fileID: 2367750229438310115, guid: 447c1fe195efcdf4f83e62f49a33f3dc, type: 3}
-  ally2prefab: {fileID: 5266785169630950782, guid: 55215b56fac7e3f4fa7671f746db1c27, type: 3}
+  ally2prefab: {fileID: 2819934410645712491, guid: 55215b56fac7e3f4fa7671f746db1c27, type: 3}
   ally3prefab: {fileID: 8087738291835429494, guid: 550043c11832baf498e8ce44a6d0d939, type: 3}
   enemy1prefab: {fileID: 7153923531996031592, guid: 8923e046216129047a386e3401ec3ced, type: 3}
   enemy2prefab: {fileID: 6678760995741319992, guid: 15900e25bf8c9804ca0258fb0fd74487, type: 3}
