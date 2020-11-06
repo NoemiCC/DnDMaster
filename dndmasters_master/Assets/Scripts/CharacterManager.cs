@@ -51,7 +51,6 @@ public class CharacterManager : MonoBehaviour
             if (sprite_object.name == "Monk" || sprite_object.name == "Bard" || sprite_object.name == "Witch")
             {
                 activeCharacters -= 1;
-                // Debug.Log("Ok unselected" + sprite_object.name);
             }
         }
         else
@@ -60,7 +59,6 @@ public class CharacterManager : MonoBehaviour
             if (sprite_object.name == "Monk" || sprite_object.name == "Bard" || sprite_object.name == "Witch")
             {
                 activeCharacters += 1;
-                //Debug.Log("Ok selected" + sprite_object.name);
             }
         }
     }

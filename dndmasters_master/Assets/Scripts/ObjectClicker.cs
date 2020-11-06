@@ -23,7 +23,6 @@ public class ObjectClicker : MonoBehaviour
             hability3.text = this.gameObject.GetComponent<Unit>().hability3;
             hability4.text = this.gameObject.GetComponent<Unit>().hability4;
             Vector3 mousePos;
-            // Debug.Log("OnMouseDown");
 
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);

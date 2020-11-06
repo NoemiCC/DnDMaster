@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
 
     public void NoteHit()
     {
-        // Debug.Log(notesLeft);
         notesLeft -= 1;
         if(game==0)
         {
@@ -126,7 +125,6 @@ public class GameManager : MonoBehaviour
 
     public void NoteMissed()
     {
-        // Debug.Log(notesLeft);
         notesLeft -= 1;
         if(game==1)
         {

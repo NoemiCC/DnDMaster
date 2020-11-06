@@ -13,7 +13,6 @@ public class InnMenuSelect : MonoBehaviour
         PlayerPrefs.SetFloat( "minigameScore", -1 );
         PlayerPrefs.SetFloat( "enemyScore", -1 );
         PlayerPrefs.SetString("startingBattle", "true");
-        PlayerPrefs.SetString("myTurn", "true");
     }
 
     public void LoadScene( string sceneName ) 

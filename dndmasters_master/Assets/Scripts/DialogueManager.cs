@@ -83,12 +83,10 @@ public class DialogueManager : MonoBehaviour
 
 		string sentence = sentences.Dequeue();
 		dialogueText.text = sentence;
-		// Debug.Log(sentence);
 	}
 
 	void EndDialogue()
 	{
-		Debug.Log("End");
 		HideDialogueBox();
 		ShowAll();
 		AllowButtons();

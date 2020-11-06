@@ -42,7 +42,6 @@ public class BattleSystem : MonoBehaviour
     float myScore;
     float enemyScore;
     string startingBattle;
-    string myTurn;
     int damage = 10;
 
     public GameObject hudCanvas;
@@ -81,8 +80,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (Globals.playerCount == 2) {
             SetUpGame();
-            // Debug.Log(pLifeBarImage.fillAmount + " - " + eLifeBarImage.fillAmount);
-            
+
             if (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0) {
                 if (pLifeBarImage.fillAmount == 0) {
                     resultTxt.text = "Que lastima, has perdido";
@@ -114,7 +112,6 @@ public class BattleSystem : MonoBehaviour
 
     void SetUpGame() {
         if (!hudCanvas.activeSelf && !endCanvas.activeSelf) {
-            // Debug.Log("Change to game");
             waitCanvas.SetActive( false );
             lifeCanvas.SetActive( true );
             hudCanvas.SetActive( true );
@@ -127,12 +124,9 @@ public class BattleSystem : MonoBehaviour
     }
 
     void SetLifeBars() {
-        myTurn = PlayerPrefs.GetString("myTurn", "true");
-
         startingBattle = PlayerPrefs.GetString("startingBattle");
         myScore = PlayerPrefs.GetFloat("minigameScore", -1);
         enemyScore = PlayerPrefs.GetFloat("enemyScore", -1);
-        // Debug.Log("Scores: " + myScore + " - " + enemyScore);
 
         if (startingBattle == "true") {
             PlayerPrefs.SetString("startingBattle", "false");
@@ -142,11 +136,9 @@ public class BattleSystem : MonoBehaviour
             pLifeBarImage.fillAmount = playerLife / maxLife;
             eLifeBarImage.fillAmount = enemyLife / maxLife;
         } else if (enemyScore == (float)-1 && myScore != -1) {
-            // Debug.Log("Waiting");
             hudCanvas.SetActive( false );
             waitCanvas.SetActive( true );
         } else if (myScore != -1 && enemyScore != -1) { // Cambiar las barras de vida
-            // Debug.Log("Change life");
             waitCanvas.SetActive( false );
             hudCanvas.SetActive( true );
 
@@ -154,7 +146,7 @@ public class BattleSystem : MonoBehaviour
                 return;
             }
             else if (myScore > enemyScore) { // Yo gano
-                if (myTurn == "true") {
+                if (Globals.myTurn) {
                     // Si es mi turno -> enemyLife -= damage
                     enemyLife = PlayerPrefs.GetFloat("enemyLife") - damage;
                     playerLife = PlayerPrefs.GetFloat("playerLife");
@@ -165,7 +157,7 @@ public class BattleSystem : MonoBehaviour
                 }
             }
             else if (myScore < enemyScore) { // Yo pierdo
-                if (myTurn == "true") {
+                if (Globals.myTurn) {
                     // Si es mi turno, yo gane -> playerLife -= damage/2
                     enemyLife = PlayerPrefs.GetFloat("enemyLife");
                     playerLife = PlayerPrefs.GetFloat("playerLife") - damage/(float)2;
@@ -176,7 +168,6 @@ public class BattleSystem : MonoBehaviour
                 }
             }
 
-            // Debug.Log(playerLife + " - " + enemyLife);
             pLifeBarImage.fillAmount = playerLife / maxLife;
             eLifeBarImage.fillAmount = enemyLife / maxLife;
         }

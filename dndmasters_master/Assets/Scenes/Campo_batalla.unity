@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1773218274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6162ccd6f915480a9b5869c422a7b6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2aed8af27ae194c4db8976e8306f0077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1784757652
@@ -3841,7 +3841,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1773218279}
-        m_TargetAssemblyTypeName: InnMenuSelect, Assembly-CSharp
+        m_TargetAssemblyTypeName: LoadScreen, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:

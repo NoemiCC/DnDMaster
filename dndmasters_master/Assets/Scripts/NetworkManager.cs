@@ -24,7 +24,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message) {
-        PlayerPrefs.SetString("myTurn", "false");
+        Globals.myTurn = false;
         PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = 2 });
     }
 

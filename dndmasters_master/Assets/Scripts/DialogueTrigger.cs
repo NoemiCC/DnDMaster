@@ -13,7 +13,6 @@ public class DialogueTrigger : MonoBehaviour {
 			FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
 		}
 
-		Debug.Log(Globals.start_welcome);
 		// FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
 		
 		Globals.start_welcome = Globals.start_welcome = 1;

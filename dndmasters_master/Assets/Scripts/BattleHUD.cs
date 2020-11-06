@@ -20,22 +20,13 @@ public class BattleHUD : MonoBehaviour
     public Text hability2text;
     public Text hability3text;
     public Text hability4text;
-
-    Boolean toggle;
-    string myTurn;
     
+    string myTurn;
     public PhotonView PV;
 
     void Start()
     {
-        myTurn = PlayerPrefs.GetString("myTurn", "true");
-        if (myTurn == "true") { toggle = true; }
-        else { toggle = false; }
-
-        toggle = !toggle;
-
-        if (toggle == true) { PlayerPrefs.SetString("myTurn", "true"); }
-        else { PlayerPrefs.SetString("myTurn", "false"); }
+        Globals.myTurn = !Globals.myTurn;
 
         Button btn1 = hability1.GetComponent<Button>();
         Button btn2 = hability2.GetComponent<Button>();
@@ -50,7 +41,6 @@ public class BattleHUD : MonoBehaviour
     }
     void TaskOnClick1()
     {
-        Debug.Log("Clicked button");
         Text text = hability1.GetComponent<Button>().GetComponentInChildren<Text>();
         PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
     }
@@ -77,8 +67,7 @@ public class BattleHUD : MonoBehaviour
 
     private void Update()
     {
-        if (toggle) {
-            Debug.Log("Can interact");
+        if (Globals.myTurn) {
             hability1.GetComponent<Button>().interactable = true;
             hability2.GetComponent<Button>().interactable = true;
             hability3.GetComponent<Button>().interactable = true;

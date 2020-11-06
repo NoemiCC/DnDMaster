@@ -12,7 +12,6 @@ public class BattleManager : MonoBehaviourPunCallbacks
 
     [PunRPC]
     void ReconMinigame(string what, string how) {
-        Debug.Log(what);
         if (what == "Réquiem") { 
             PlayerPrefs.SetInt("game", 0);
             SceneManager.LoadScene( "MusicGame" ); 

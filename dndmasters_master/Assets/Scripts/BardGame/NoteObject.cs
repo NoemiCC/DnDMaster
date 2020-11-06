@@ -17,7 +17,6 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        //Debug.Log("Enter trigger");
         if(other.name == "Player")
         {
             gameObject.SetActive(false);
