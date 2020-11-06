@@ -1532,6 +1532,7 @@ MonoBehaviour:
   gameCanvas1: {fileID: 1056839451}
   gameCanvas2: {fileID: 1634285857}
   gameCanvas3: {fileID: 2036205278}
+  Title: {fileID: 2108347489}
   Titulo: {fileID: 2108347489}
   rulesCanvas: {fileID: 763941228}
   endCanvas: {fileID: 995896059}

@@ -50,6 +50,7 @@ public class BattleHUD : MonoBehaviour
     }
     void TaskOnClick1()
     {
+        Debug.Log("Clicked button");
         Text text = hability1.GetComponent<Button>().GetComponentInChildren<Text>();
         PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
     }
@@ -77,6 +78,7 @@ public class BattleHUD : MonoBehaviour
     private void Update()
     {
         if (toggle) {
+            Debug.Log("Can interact");
             hability1.GetComponent<Button>().interactable = true;
             hability2.GetComponent<Button>().interactable = true;
             hability3.GetComponent<Button>().interactable = true;
