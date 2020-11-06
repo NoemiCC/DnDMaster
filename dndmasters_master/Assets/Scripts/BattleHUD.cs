@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 // Muestra los botones y el nombre de la unidad (agregar también el turno de quien es)
 
@@ -19,8 +20,12 @@ public class BattleHUD : MonoBehaviour
     public Text hability3text;
     public Text hability4text;
 
+    Boolean toggle;
+    
+
     void Start()
     {
+        toggle = !toggle;
 
         Button btn1 = hability1.GetComponent<Button>();
         Button btn2 = hability2.GetComponent<Button>();
@@ -33,6 +38,7 @@ public class BattleHUD : MonoBehaviour
         btn2.onClick.AddListener(TaskOnClick2);
         btn3.onClick.AddListener(TaskOnClick3);
         btn4.onClick.AddListener(TaskOnClick4);
+        
     }
     void TaskOnClick1()
     {
@@ -79,5 +85,29 @@ public class BattleHUD : MonoBehaviour
     public void SetHUD (Unit unit)
     {
         nameText.text = unit.unitName;
+        
+    }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            toggle = !toggle;
+
+            if (toggle)
+            {
+                hability1.GetComponent<Button>().interactable = true;
+                hability2.GetComponent<Button>().interactable = true;
+                hability3.GetComponent<Button>().interactable = true;
+                hability4.GetComponent<Button>().interactable = true;
+            }
+            else
+            {
+                hability1.GetComponent<Button>().interactable = false;
+                hability2.GetComponent<Button>().interactable = false;
+                hability3.GetComponent<Button>().interactable = false;
+                hability4.GetComponent<Button>().interactable = false;
+            }
+                
+        }
     }
 }
