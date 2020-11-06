@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23344237}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Row02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 85231292}
   - component: {fileID: 85231294}
   - component: {fileID: 85231293}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,14 +212,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &85231294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -283,7 +310,7 @@ GameObject:
   - component: {fileID: 85599694}
   - component: {fileID: 85599693}
   - component: {fileID: 85599695}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +606,7 @@ GameObject:
   - component: {fileID: 124605606}
   - component: {fileID: 124605608}
   - component: {fileID: 124605607}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +743,7 @@ GameObject:
   - component: {fileID: 127050514}
   - component: {fileID: 127050513}
   - component: {fileID: 127050512}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +863,7 @@ GameObject:
   - component: {fileID: 159127749}
   - component: {fileID: 159127748}
   - component: {fileID: 159127747}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186434519}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Row03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1155,7 @@ GameObject:
   - component: {fileID: 337973707}
   - component: {fileID: 337973709}
   - component: {fileID: 337973708}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1264,7 +1291,7 @@ GameObject:
   - component: {fileID: 361066211}
   - component: {fileID: 361066213}
   - component: {fileID: 361066212}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,7 +1428,7 @@ GameObject:
   - component: {fileID: 381828832}
   - component: {fileID: 381828831}
   - component: {fileID: 381828830}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1547,7 @@ GameObject:
   - component: {fileID: 400261234}
   - component: {fileID: 400261236}
   - component: {fileID: 400261235}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1560,14 +1587,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &400261236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1630,7 +1684,7 @@ GameObject:
   - component: {fileID: 403710154}
   - component: {fileID: 403710156}
   - component: {fileID: 403710155}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,14 +1724,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &403710156
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1740,7 +1821,7 @@ GameObject:
   - component: {fileID: 500407143}
   - component: {fileID: 500407145}
   - component: {fileID: 500407144}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1780,14 +1861,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &500407145
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1850,7 +1958,7 @@ GameObject:
   - component: {fileID: 533943137}
   - component: {fileID: 533943139}
   - component: {fileID: 533943138}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1987,7 +2095,7 @@ GameObject:
   - component: {fileID: 535857968}
   - component: {fileID: 535857967}
   - component: {fileID: 535857966}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2106,7 +2214,7 @@ GameObject:
   - component: {fileID: 629627477}
   - component: {fileID: 629627479}
   - component: {fileID: 629627478}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2146,14 +2254,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &629627479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2282,7 +2417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633909833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.97}
+  m_LocalPosition: {x: 0, y: 0, z: -2.09}
   m_LocalScale: {x: 0.45, y: 0.69, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2299,7 +2434,7 @@ GameObject:
   - component: {fileID: 639852026}
   - component: {fileID: 639852028}
   - component: {fileID: 639852027}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2339,14 +2474,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &639852028
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2409,7 +2571,7 @@ GameObject:
   - component: {fileID: 640122056}
   - component: {fileID: 640122058}
   - component: {fileID: 640122057}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2449,14 +2611,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &640122058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2546,9 +2735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Requiem
-
-'
+  m_text: "Conjuraci\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2654,7 +2841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880780120}
   - component: {fileID: 880780121}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2703,6 +2890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: 123
   attemptedCode: 
+  game: 0
   log: {fileID: 1706196397}
   button01: {fileID: 1531693853}
   button02: {fileID: 1746923462}
@@ -2726,7 +2914,7 @@ GameObject:
   - component: {fileID: 924751419}
   - component: {fileID: 924751421}
   - component: {fileID: 924751420}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2766,14 +2954,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &924751421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2873,7 +3088,7 @@ GameObject:
   - component: {fileID: 969204764}
   - component: {fileID: 969204766}
   - component: {fileID: 969204765}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2913,14 +3128,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &969204766
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2983,7 +3225,7 @@ GameObject:
   - component: {fileID: 992787857}
   - component: {fileID: 992787859}
   - component: {fileID: 992787858}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3023,14 +3265,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &992787859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3093,7 +3362,7 @@ GameObject:
   - component: {fileID: 1000983497}
   - component: {fileID: 1000983499}
   - component: {fileID: 1000983498}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,7 +3498,7 @@ GameObject:
   - component: {fileID: 1169905587}
   - component: {fileID: 1169905589}
   - component: {fileID: 1169905588}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,7 +3634,7 @@ GameObject:
   - component: {fileID: 1207562956}
   - component: {fileID: 1207562958}
   - component: {fileID: 1207562957}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3565,7 +3834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290187400}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Row01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3655,7 +3924,7 @@ GameObject:
   - component: {fileID: 1321734328}
   - component: {fileID: 1321734327}
   - component: {fileID: 1321734326}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3775,7 +4044,7 @@ GameObject:
   - component: {fileID: 1334388898}
   - component: {fileID: 1334388897}
   - component: {fileID: 1334388896}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4030,7 +4299,7 @@ GameObject:
   - component: {fileID: 1344395535}
   - component: {fileID: 1344395537}
   - component: {fileID: 1344395536}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4070,14 +4339,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &1344395537
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4238,7 +4534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1470707291}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Row05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4280,7 +4576,7 @@ GameObject:
   - component: {fileID: 1531693854}
   - component: {fileID: 1531693853}
   - component: {fileID: 1531693856}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4411,7 +4707,7 @@ GameObject:
   - component: {fileID: 1540892926}
   - component: {fileID: 1540892928}
   - component: {fileID: 1540892927}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4451,14 +4747,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &1540892928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4521,7 +4844,7 @@ GameObject:
   - component: {fileID: 1582351030}
   - component: {fileID: 1582351032}
   - component: {fileID: 1582351031}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4561,14 +4884,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &1582351032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4632,7 +4982,7 @@ GameObject:
   - component: {fileID: 1628125087}
   - component: {fileID: 1628125086}
   - component: {fileID: 1628125085}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4750,7 +5100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1706196398}
   - component: {fileID: 1706196399}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4805,7 +5155,7 @@ GameObject:
   - component: {fileID: 1746923464}
   - component: {fileID: 1746923463}
   - component: {fileID: 1746923462}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5023,7 +5373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780890497}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Row04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5063,7 +5413,7 @@ GameObject:
   - component: {fileID: 1855985450}
   - component: {fileID: 1855985452}
   - component: {fileID: 1855985451}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5103,14 +5453,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &1855985452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5173,7 +5550,7 @@ GameObject:
   - component: {fileID: 1918265604}
   - component: {fileID: 1918265606}
   - component: {fileID: 1918265605}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: rune03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5213,14 +5590,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeLock: {fileID: 880780121}
   sprite01: {fileID: 21300000, guid: 903c89b6e34dff04ca4a56f2fe5aa62c, type: 3}
+  sprite01Right: {fileID: 21300000, guid: 9cd4e33274a9a7a4391c2605516eefaf, type: 3}
+  sprite01Wrong: {fileID: 21300000, guid: 72f8caf205f5e2c419a8c6bebbf4f9cc, type: 3}
+  sprite01Search: {fileID: 21300000, guid: 81020af0099ed46479dccade9cdfb3a1, type: 3}
   sprite02: {fileID: 21300000, guid: 653e10011dac5e740b933d768f8399ac, type: 3}
+  sprite02Right: {fileID: 21300000, guid: 0045379de894a9d4da0e65b58b4e24e0, type: 3}
+  sprite02Wrong: {fileID: 21300000, guid: 3425040bab86df64fa3ba8e99230181f, type: 3}
+  sprite02Search: {fileID: 21300000, guid: 3ffa6e0dd680d65428e8919ffeabcf82, type: 3}
   sprite03: {fileID: 21300000, guid: 5fbedf1630bae87428304e70c0173595, type: 3}
+  sprite03Right: {fileID: 21300000, guid: 9a96645c320949640b4700f33e61efd3, type: 3}
+  sprite03Wrong: {fileID: 21300000, guid: b55d18ea81129c546a5a0996e487fcca, type: 3}
+  sprite03Search: {fileID: 21300000, guid: d697d57a63baa384ab7d3d9f103114ae, type: 3}
   sprite04: {fileID: 21300000, guid: ac26fcf227bcc6644bfc207efa1650ea, type: 3}
+  sprite04Right: {fileID: 21300000, guid: 1cedd22977be4244ca99cefbcc1efebf, type: 3}
+  sprite04Wrong: {fileID: 21300000, guid: 896f08ef112e49a4a9aa50cc1b813176, type: 3}
+  sprite04Search: {fileID: 21300000, guid: af2944031955d1b4faefa690b75a9347, type: 3}
   sprite05: {fileID: 21300000, guid: c52c1b3ee536d6444a73dec9b0df154a, type: 3}
+  sprite05Right: {fileID: 21300000, guid: 8e4e6abb388466848b2f660fc94ec84a, type: 3}
+  sprite05Wrong: {fileID: 21300000, guid: e00d2f58ab250454da46028073e86bf7, type: 3}
+  sprite05Search: {fileID: 21300000, guid: 06d78c5a16152e04ab0d46f9f7eb54c8, type: 3}
   sprite06: {fileID: 21300000, guid: 872342e57c65796439305096c60cb077, type: 3}
+  sprite06Right: {fileID: 21300000, guid: 06dedec71440c6e4381a541b11acf300, type: 3}
+  sprite06Wrong: {fileID: 21300000, guid: d2e4fa81e9ab741429b53d70b2c50417, type: 3}
+  sprite06Search: {fileID: 21300000, guid: 23144ec9839fa7640b4f91e5f398db9c, type: 3}
   sprite07: {fileID: 21300000, guid: bb35f39ff01ab194f8134cffe2f76173, type: 3}
+  sprite07Right: {fileID: 21300000, guid: 8bd11b87889d40b40bb124789b2e8142, type: 3}
+  sprite07Wrong: {fileID: 21300000, guid: 2caac22493dcf9241b237500cf89e90c, type: 3}
+  sprite07Search: {fileID: 21300000, guid: b26b8c5b5dad3c048ae819f11dcf5c47, type: 3}
   sprite08: {fileID: 21300000, guid: 86fb6b8373fcf214294f36f5698b3137, type: 3}
+  sprite08Right: {fileID: 21300000, guid: c2db7e03e9f6d7547aaf222dacf7d5b4, type: 3}
+  sprite08Wrong: {fileID: 21300000, guid: 8db8061938ad01f4ab6ff8091ba0596d, type: 3}
+  sprite08Search: {fileID: 21300000, guid: 2bc4f9bef6f9a5c4692d36e05fd28cf0, type: 3}
   sprite09: {fileID: 21300000, guid: 8ac7771df3efa254aa82c1b78e873f1b, type: 3}
+  sprite09Right: {fileID: 21300000, guid: da5124c1a550d8648adedb115fe2848f, type: 3}
+  sprite09Wrong: {fileID: 21300000, guid: c2bf9cab6fa90e44ea29c1c020b7b41a, type: 3}
+  sprite09Search: {fileID: 21300000, guid: 0acb06ff1b7b0f941961ad05fb9742a2, type: 3}
 --- !u!212 &1918265606
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5283,7 +5687,7 @@ GameObject:
   - component: {fileID: 2036636179}
   - component: {fileID: 2036636181}
   - component: {fileID: 2036636180}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

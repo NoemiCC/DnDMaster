@@ -35,7 +35,6 @@ public class CodeLock : MonoBehaviour
         double roof = Math.Pow(number, codeLength);
         int randomCode  = rnd.Next(Convert.ToInt32(floor), Convert.ToInt32(roof-1));
         code = randomCode.ToString();
-        Debug.Log(code);
         Button btn01 = button01.GetComponent<Button>();
         Button btn02 = button02.GetComponent<Button>();
         Button btn03 = button03.GetComponent<Button>();

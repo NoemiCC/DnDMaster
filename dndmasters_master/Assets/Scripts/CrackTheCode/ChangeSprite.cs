@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ChangeSprite : MonoBehaviour
 {
     public CodeLock codeLock;
+    public Sprite sprite00;
     public Sprite sprite01;
     public Sprite sprite01Right;
     public Sprite sprite01Wrong;
@@ -57,16 +59,46 @@ public class ChangeSprite : MonoBehaviour
     public Sprite sprite09Right;
     public Sprite sprite09Wrong;
     public Sprite sprite09Search;
+    public List<Sprite> vainillaSprites = new List<Sprite>();
+
+    public int memorySprite;
 
     private SpriteRenderer spriteRenderer; 
     void Start()
     {
+        vainillaSprites.Add(sprite00);
+        vainillaSprites.Add(sprite01);
+        vainillaSprites.Add(sprite02);
+        vainillaSprites.Add(sprite03);
+        vainillaSprites.Add(sprite04);
+        vainillaSprites.Add(sprite05);
+        vainillaSprites.Add(sprite06);
+        vainillaSprites.Add(sprite07);
+        vainillaSprites.Add(sprite08);
+        vainillaSprites.Add(sprite09);
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void Change(GameObject btn)
+    void OnMouseDown()
     {
-        spriteRenderer.sprite = sprite01;
-    }
+        int gameMode = transform.root.gameObject.GetComponent<GameSelector>().gameMode;
+        if (gameMode == 1)
+        {
+            Debug.Log("flip!");
+            if (transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected >= 2)
+            {
+                // Agregar checkeo de igualdad
+                transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected = 0;
+                spriteRenderer.sprite = vainillaSprites[0];
+
+            }else {
+            transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected += 1;
+            Debug.Log("memory sprite: " + memorySprite);
+            spriteRenderer.sprite = vainillaSprites[memorySprite];
+            }
+        }
+    }  
+
 }
