@@ -2,7 +2,6 @@
  {
      public static int start_welcome = 0;
      public static int characters_selected = 0;
-     public static int money = 0;
      public static int playerCount = 0;
      
  }
