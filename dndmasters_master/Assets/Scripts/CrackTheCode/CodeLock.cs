@@ -13,7 +13,6 @@ public class CodeLock : MonoBehaviour
     int placeInCode;
     public string code;
     public string attemptedCode;
-    public int game = 0;
     public GameObject log;
     public Button button01;
     public Button button02;
@@ -70,17 +69,20 @@ public class CodeLock : MonoBehaviour
     {
         if(attemptedCode == code)
         {
+            Debug.Log("right code");
             CodeManager.instance.tries = 5;
             Open();
         }
         else
         {
+            Debug.Log("wrong code");
             CodeManager.instance.tries -= 1;
 
             // Colorear runas 
 
             if(CodeManager.instance.tries <= 0)
             {
+                Debug.Log("¡Perdiste!");
                 // Terminar juego y volver a batalla
                 CodeManager.instance.tries = 5;
                 PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
@@ -91,8 +93,9 @@ public class CodeLock : MonoBehaviour
 
     void Open()
     {
-        PlayerPrefs.SetFloat( "minigameScore", 10 );
-        PV.RPC("UpdatePoints", RpcTarget.Others, (float)10);
+        Debug.Log("Yeah!");
+        PlayerPrefs.SetFloat( "minigameScore", CodeManager.instance.tries );
+        PV.RPC("UpdatePoints", RpcTarget.Others, CodeManager.instance.tries);
         SceneManager.LoadScene("Campo_batalla");
     }
 
@@ -105,6 +108,7 @@ public class CodeLock : MonoBehaviour
         rows.Add(child.gameObject);
         }
         SpriteRenderer spriteRenderer = rune.GetComponent<SpriteRenderer>();
+        Debug.Log("place" + placeInCode);
         if(int.Parse(value) == 1)
         {
             if(value == Char.ToString(code[placeInCode]))

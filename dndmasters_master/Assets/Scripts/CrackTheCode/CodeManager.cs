@@ -16,32 +16,46 @@ public class CodeManager : MonoBehaviour
     public GameObject instructions;
     void Start()
     {
+        int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
         instance = this;
+        if(gameMode==0)
+        {
         scoreText.text = "Quedan:"; 
-        gameText.text = "Crack the Code";
+        gameText.text = "Conjuración";
+        }else if(gameMode==1)
+        {
+        scoreText.text = "Puntaje:"; 
+        gameText.text = "Alquimia";
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!startPlaying)
+        if(transform.parent.gameObject.GetComponent<GameSelector>().gameMode == 0)
         {
-            if(!gameOver)
+            if(!startPlaying)
             {
-                if(Input.anyKeyDown)
+                if(!gameOver)
                 {
-                    instructions.SetActive(false);
-                    startPlaying = true;
-                    gameText.text = "";
+                    if(Input.anyKeyDown)
+                    {
+                        instructions.SetActive(false);
+                        startPlaying = true;
+                        gameText.text = "";
+                    }
+                    scoreText.text = "Quedan: " + tries; 
                 }
+            
             }
-        
+            if(gameOver)
+            {
+                startPlaying = false;
+                gameText.text = "Terminó el juego";
+            }
         }
-        if(gameOver)
-        {
-            startPlaying = false;
-            gameText.text = "Terminó el juego";
-        }
+
+
     }
 
 
