@@ -16,9 +16,17 @@ public class CodeManager : MonoBehaviour
     public GameObject instructions;
     void Start()
     {
+        int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
         instance = this;
+        if(gameMode==0)
+        {
         scoreText.text = "Quedan:"; 
-        gameText.text = "Crack the Code";
+        gameText.text = "Conjuración";
+        }else if(gameMode==1)
+        {
+        scoreText.text = "Puntaje:"; 
+        gameText.text = "Alquimia";
+        }
     }
 
     // Update is called once per frame

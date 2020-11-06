@@ -60,6 +60,7 @@ public class ChangeSprite : MonoBehaviour
     public Sprite sprite09Wrong;
     public Sprite sprite09Search;
     public List<Sprite> vainillaSprites = new List<Sprite>();
+    public List<Sprite> rightSprites = new List<Sprite>();
 
     public int memorySprite;
 
@@ -77,6 +78,16 @@ public class ChangeSprite : MonoBehaviour
         vainillaSprites.Add(sprite08);
         vainillaSprites.Add(sprite09);
 
+        rightSprites.Add(sprite01Right);
+        rightSprites.Add(sprite02Right);
+        rightSprites.Add(sprite03Right);
+        rightSprites.Add(sprite04Right);
+        rightSprites.Add(sprite05Right);
+        rightSprites.Add(sprite06Right);
+        rightSprites.Add(sprite07Right);
+        rightSprites.Add(sprite08Right);
+        rightSprites.Add(sprite09Right);
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -87,15 +98,14 @@ public class ChangeSprite : MonoBehaviour
         if (gameMode == 1)
         {
             Debug.Log("flip!");
+            transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected += 1;
+            transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().runesSelected.Add(gameObject);
             if (transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected >= 2)
             {
-                // Agregar checkeo de igualdad
-                transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected = 0;
-                spriteRenderer.sprite = vainillaSprites[0];
+                spriteRenderer.sprite = vainillaSprites[memorySprite];
+                transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().go();
 
             }else {
-            transform.parent.transform.parent.gameObject.GetComponent<memoryGameController>().selected += 1;
-            Debug.Log("memory sprite: " + memorySprite);
             spriteRenderer.sprite = vainillaSprites[memorySprite];
             }
         }

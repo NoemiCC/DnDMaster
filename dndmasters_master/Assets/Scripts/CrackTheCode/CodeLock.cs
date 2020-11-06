@@ -12,7 +12,6 @@ public class CodeLock : MonoBehaviour
     int placeInCode;
     public string code;
     public string attemptedCode;
-    public int game = 0;
     public GameObject log;
     public Button button01;
     public Button button02;
