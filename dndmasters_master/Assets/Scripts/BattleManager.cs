@@ -19,10 +19,43 @@ public class BattleManager : MonoBehaviourPunCallbacks
             PlayerPrefs.SetInt("game", 1);
             SceneManager.LoadScene( "MusicGame" ); 
         }
+        // else if (what == "Giocoso") { 
+        //     PlayerPrefs.SetInt("game", 2);
+        //     SceneManager.LoadScene( "MusicGame" ); 
+        // }
+        // else if (what == "Allegro") { 
+        //     PlayerPrefs.SetInt("game", 3);
+        //     SceneManager.LoadScene( "MusicGame" ); 
+        // }
 
-        if (what == "Bloqueo de Chi") { SceneManager.LoadScene("MonkGame"); }
+        if (what == "Bloqueo de Chi") {
+            PlayerPrefs.SetInt("game", 0);
+            SceneManager.LoadScene("MonkGame");
+        } else if (what == "Meditar") {
+            PlayerPrefs.SetInt("game", 1);
+            SceneManager.LoadScene("MonkGame");
+        } else if (what == "Patada alta") {
+            PlayerPrefs.SetInt("game", 2);
+            SceneManager.LoadScene("MonkGame");
+        } else if (what == "Velocidad extrema") {
+            PlayerPrefs.SetInt("game", 3);
+            SceneManager.LoadScene("MonkGame");
+        }
 
-        if (what == "Invocación") { SceneManager.LoadScene("CrackTheCode"); }
+        if (what == "Invocación") {
+            PlayerPrefs.SetInt("game", 0);
+            SceneManager.LoadScene("CrackTheCode");
+        }
+        // else if (what == "Raíces atrapadoras") {
+        //     PlayerPrefs.SetInt("game", 0);
+        //     SceneManager.LoadScene("CrackTheCode");
+        // } else if (what == "Semilla de curación") {
+        //     PlayerPrefs.SetInt("game", 0);
+        //     SceneManager.LoadScene("CrackTheCode");
+        // } else if (what == "Nube tóxica") {
+        //     PlayerPrefs.SetInt("game", 0);
+        //     SceneManager.LoadScene("CrackTheCode");
+        // }
     }
 
     [PunRPC]
