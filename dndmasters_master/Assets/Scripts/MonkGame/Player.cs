@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class Player : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Player : MonoBehaviour
     public float maxTime = 10f;
     float timeLeft;
     bool gameOver = false;
+
+    public PhotonView PV;
     
 
     private void Awake() {
@@ -42,12 +45,14 @@ public class Player : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
         } else if (!gameOver) {
+            PlayerPrefs.SetFloat( "minigameScore", 0 );
             gameCanvas.SetActive( false );
             endCanvas.SetActive( true );
 
             endTitle.text = "Se acabo el tiempo";
             endPoints.text += "0";
             gameOver = true;
+            PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
         }
     }
 
@@ -64,15 +69,18 @@ public class Player : MonoBehaviour
                 endTitle.text = "Lo lograste!";
                 endPoints.text += "10";
                 gameOver = true;
+                PV.RPC("UpdatePoints", RpcTarget.Others, (float)10);
             }
 
         } else if (collision.gameObject.tag == "Bad" && !gameOver) {
+            PlayerPrefs.SetFloat( "minigameScore", 0 );
             gameCanvas.SetActive( false );
             endCanvas.SetActive( true );
 
             endTitle.text = "Has presionado un punto equivocado";
             endPoints.text += "0";
             gameOver = true;
+            PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using Photon.Pun;
 
 // Muestra los botones y el nombre de la unidad (agregar también el turno de quien es)
 
@@ -22,6 +23,7 @@ public class BattleHUD : MonoBehaviour
 
     Boolean toggle;
     
+    public PhotonView PV;
 
     void Start()
     {
@@ -43,65 +45,41 @@ public class BattleHUD : MonoBehaviour
     void TaskOnClick1()
     {
         Text text = hability1.GetComponent<Button>().GetComponentInChildren<Text>();
-        ReconMinigame(text);
+        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
     }
 
     void TaskOnClick2()
     {
         Text text = hability2.GetComponent<Button>().GetComponentInChildren<Text>();
-        ReconMinigame(text);
+        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
     }
     void TaskOnClick3()
     {
         Text text = hability3.GetComponent<Button>().GetComponentInChildren<Text>();
-        ReconMinigame(text);
+        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
     }
     void TaskOnClick4()
     {
         Text text = hability4.GetComponent<Button>().GetComponentInChildren<Text>();
-        ReconMinigame(text);
+        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
     }
 
-
-    // Agregar aquí el nombre de todos los minijuegos para ir a su escena
-    void ReconMinigame(Text text)
-    {
-        if(text.text == "Réquiem")
-        {
-            SceneManager.LoadScene( "MusicGame" );
-        }
-
-        if (text.text == "Bloqueo de Chi")
-        {
-            SceneManager.LoadScene("MonkGame");
-        }
-
-        if (text.text == "Invocación")
-        {
-            SceneManager.LoadScene("CrackTheCode");
-        }
-    }
-
-    public void SetHUD (Unit unit)
-    {
+    public void SetHUD (Unit unit) {
         nameText.text = unit.unitName;
-        
     }
+
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
             toggle = !toggle;
 
-            if (toggle)
-            {
+            if (toggle) {
                 hability1.GetComponent<Button>().interactable = true;
                 hability2.GetComponent<Button>().interactable = true;
                 hability3.GetComponent<Button>().interactable = true;
                 hability4.GetComponent<Button>().interactable = true;
-            }
-            else
-            {
+            } else {
                 hability1.GetComponent<Button>().interactable = false;
                 hability2.GetComponent<Button>().interactable = false;
                 hability3.GetComponent<Button>().interactable = false;
