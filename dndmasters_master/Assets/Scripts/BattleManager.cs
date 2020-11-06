@@ -8,6 +8,8 @@ public class BattleManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void UpdatePlayerCount() {
         Globals.playerCount = PhotonNetwork.CurrentRoom.PlayerCount;
+        Debug.Log(Globals.playerCount);
+        if (Globals.playerCount == 1) { Globals.myTurn = false; }
     }
 
     [PunRPC]
