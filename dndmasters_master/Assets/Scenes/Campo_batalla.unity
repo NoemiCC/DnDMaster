@@ -1161,12 +1161,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleHUD: {fileID: 1230214537}
-  ally1prefab: {fileID: 4157947763650056218, guid: 447c1fe195efcdf4f83e62f49a33f3dc, type: 3}
-  ally2prefab: {fileID: 2178509866427269819, guid: 55215b56fac7e3f4fa7671f746db1c27, type: 3}
-  ally3prefab: {fileID: 4831610460289317784, guid: 550043c11832baf498e8ce44a6d0d939, type: 3}
-  enemy1prefab: {fileID: 1871288354644597468, guid: 8923e046216129047a386e3401ec3ced, type: 3}
-  enemy2prefab: {fileID: 2828177592896421510, guid: 15900e25bf8c9804ca0258fb0fd74487, type: 3}
-  enemy3prefab: {fileID: 4014235001569797186, guid: ee4f965bef8424847bc54998b81bd7ae, type: 3}
+  ally1prefab: {fileID: 2367750229438310115, guid: 447c1fe195efcdf4f83e62f49a33f3dc, type: 3}
+  ally2prefab: {fileID: 5266785169630950782, guid: 55215b56fac7e3f4fa7671f746db1c27, type: 3}
+  ally3prefab: {fileID: 8087738291835429494, guid: 550043c11832baf498e8ce44a6d0d939, type: 3}
+  enemy1prefab: {fileID: 7153923531996031592, guid: 8923e046216129047a386e3401ec3ced, type: 3}
+  enemy2prefab: {fileID: 6678760995741319992, guid: 15900e25bf8c9804ca0258fb0fd74487, type: 3}
+  enemy3prefab: {fileID: 8701867658086848743, guid: ee4f965bef8424847bc54998b81bd7ae, type: 3}
   ally1Tile: {fileID: 682866520}
   ally2Tile: {fileID: 716321186}
   ally3Tile: {fileID: 826365204}
