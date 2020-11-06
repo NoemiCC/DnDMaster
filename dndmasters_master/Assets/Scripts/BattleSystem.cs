@@ -114,7 +114,7 @@ public class BattleSystem : MonoBehaviour
 
     void SetUpGame() {
         if (!hudCanvas.activeSelf && !endCanvas.activeSelf) {
-            // Debug.Log("Change to game");
+            Debug.Log("Change to game");
             waitCanvas.SetActive( false );
             lifeCanvas.SetActive( true );
             hudCanvas.SetActive( true );
