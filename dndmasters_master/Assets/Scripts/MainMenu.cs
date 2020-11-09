@@ -14,7 +14,8 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetString( "username", nameInput.text );
     	    SceneManager.LoadScene( sceneName );
         } else {
-            nameInput.text = "Necesitas nombre!!!";
+            //nameInput.text = "¡Necesitas un nombre!";
+            StartCoroutine(UserErrorCoroutine());
         }
         
     }
@@ -22,5 +23,12 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
     	Application.Quit();
+    }
+
+    IEnumerator UserErrorCoroutine()
+    {
+        nameInput.text = "¡Necesitas un nombre!";
+        yield return new WaitForSeconds(1);
+        nameInput.text = "";
     }
 }

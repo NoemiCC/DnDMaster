@@ -10,17 +10,25 @@ public class GameStatus : MonoBehaviour
     public bool beginner = true;
 
     Text moneyText;
+    Text userText;
     public GameObject money;
+    public GameObject userName;
+
+    public AudioSource innMusic;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //LoadPlayer();
+        innMusic.Play();
+        StartCoroutine(FadeAudioSource.StartFade(innMusic, 1, 0.1f));
     }
 
     void Update()
     {
         ChangeCoins();
+        ChangeUserName();
     }
 
 	public void SavePlayer ()
@@ -44,4 +52,9 @@ public class GameStatus : MonoBehaviour
         moneyText.text = "Dinero: $" + PlayerPrefs.GetInt("money", 0);
     }
 
+    public void ChangeUserName ()
+    {
+        userText = userName.GetComponent<Text>();
+        userText.text = "Usuario: " + PlayerPrefs.GetString("username", "Anon");
+    }
 }
