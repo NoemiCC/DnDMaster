@@ -5032,7 +5032,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1294169904}
-  - component: {fileID: 1294169903}
   - component: {fileID: 1294169905}
   m_Layer: 0
   m_Name: UI Controller
@@ -5041,24 +5040,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1294169903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294169902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11c5390e8445df444ac287ada45263f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPlaying: 0
-  gameOver: 0
-  tries: 5
-  scoreText: {fileID: 118248721}
-  gameText: {fileID: 688282781}
-  instructions: {fileID: 1397994396}
 --- !u!4 &1294169904
 Transform:
   m_ObjectHideFlags: 0
@@ -5091,6 +5072,8 @@ MonoBehaviour:
   scoreText: {fileID: 118248721}
   gameText: {fileID: 688282781}
   instructions: {fileID: 1397994396}
+  mainInstructions: {fileID: 0}
+  gameInstructions: {fileID: 0}
 --- !u!1 &1294550502
 GameObject:
   m_ObjectHideFlags: 0
@@ -6097,6 +6080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runes: 16
   score: 0
+  PV: {fileID: 0}
   rows: []
   selected: 0
   runesSelected: []
@@ -8023,7 +8007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd6f6f0dc7160a4786fd6bcbfc822a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMode: 1
+  gameMode: 0
   codeObject: {fileID: 1122987307}
   memoryObject: {fileID: 1430886730}
 --- !u!1 &1780890496
