@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
-public class Player : MonoBehaviour
+public class MonkPlayer : MonoBehaviour
 {
     public GameObject gameCanvas;
 
