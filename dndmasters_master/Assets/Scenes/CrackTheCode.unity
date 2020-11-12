@@ -5072,7 +5072,10 @@ MonoBehaviour:
   scoreText: {fileID: 118248721}
   gameText: {fileID: 688282781}
   instructions: {fileID: 1397994396}
+<<<<<<< HEAD
   mainInstructions: {fileID: 1340957281}
+=======
+>>>>>>> 1efe0689dbca2c3f2ab4e0aa28b240388668fe76
   gameInstructions: {fileID: 230249373}
 --- !u!1 &1294550502
 GameObject:
@@ -5639,7 +5642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Presiona la pantalla para comenzar
+  m_text: 'Presiona cualquier tecla para empezar
 
 '
   m_isRightToLeft: 0
@@ -6486,7 +6489,6 @@ GameObject:
   - component: {fileID: 1531693855}
   - component: {fileID: 1531693854}
   - component: {fileID: 1531693853}
-  - component: {fileID: 1531693856}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -6595,18 +6597,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531693851}
   m_CullTransparentMesh: 0
---- !u!114 &1531693856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531693851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d4fe9f5b95b4741ad25136c26612fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1536737021
 GameObject:
   m_ObjectHideFlags: 0

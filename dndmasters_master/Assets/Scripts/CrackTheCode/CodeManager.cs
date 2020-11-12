@@ -14,15 +14,12 @@ public class CodeManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameText;
     public GameObject instructions;
-    public TextMeshProUGUI mainInstructions;
-
     public TextMeshProUGUI gameInstructions;
 
     void Start()
     {
         int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
         instance = this;
-        mainInstructions.text = "Presiona cualquier tecla para empezar.";
         if(gameMode==0)
         {
         scoreText.text = "Quedan:"; 
