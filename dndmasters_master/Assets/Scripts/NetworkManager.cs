@@ -11,10 +11,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (!PhotonNetwork.IsConnected) { Connect(); }
     }
 
-    // void OnDestroy() {
-    //     PhotonNetwork.Disconnect();
-    // }
-
     public void Connect() {
         PhotonNetwork.ConnectUsingSettings();
     }

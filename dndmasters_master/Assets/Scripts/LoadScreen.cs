@@ -10,7 +10,7 @@ public class LoadScreen : MonoBehaviour
     {
         if (sceneName == "InnScene" && PhotonNetwork.IsConnected) {
             PhotonNetwork.Disconnect();
-            // Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
+            Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         }
         SceneManager.LoadScene( sceneName );
     }

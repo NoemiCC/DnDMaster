@@ -5072,8 +5072,8 @@ MonoBehaviour:
   scoreText: {fileID: 118248721}
   gameText: {fileID: 688282781}
   instructions: {fileID: 1397994396}
-  mainInstructions: {fileID: 0}
-  gameInstructions: {fileID: 0}
+  mainInstructions: {fileID: 1340957281}
+  gameInstructions: {fileID: 230249373}
 --- !u!1 &1294550502
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,7 +6080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runes: 16
   score: 0
-  PV: {fileID: 0}
+  PV: {fileID: 1384964529}
   rows: []
   selected: 0
   runesSelected: []
