@@ -7,6 +7,9 @@ public class CharacterManager : MonoBehaviour
 	public GameObject monk;
 	public GameObject witch;
 	public GameObject bard;
+    public GameObject monk_ok;
+    public GameObject witch_ok;
+    public GameObject bard_ok;
 	public GameObject selectFirst_text;
     private int activeCharacters = 0;
     
@@ -40,6 +43,9 @@ public class CharacterManager : MonoBehaviour
 		monk.SetActive(true);
 		witch.SetActive(true);
 		bard.SetActive(true);
+        monk_ok.SetActive(true);
+        witch_ok.SetActive(true);
+        bard_ok.SetActive(true);
     }
 
     // prende y apaga el sprite del heroe en el Inn

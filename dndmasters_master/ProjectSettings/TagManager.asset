@@ -8,6 +8,7 @@ TagManager:
   - Point
   - Timer
   - Money
+  - MenuButton
   layers:
   - Default
   - TransparentFX
