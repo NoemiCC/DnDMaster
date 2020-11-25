@@ -44,10 +44,12 @@ public class BattleSystem : MonoBehaviour
     string startingBattle;
     int damage = 10;
 
+    public GameObject selectCanvas;
     public GameObject hudCanvas;
     public GameObject lifeCanvas;
     public GameObject endCanvas;
     public GameObject waitCanvas;
+    public Text selectText;
     public Text resultTxt;
     public Text pointsTxt;
     float maxLife = 30;
@@ -58,13 +60,12 @@ public class BattleSystem : MonoBehaviour
     Image eLifeBarImage;
     public PhotonView PV;
 
-    
-
 
     void Start()
     {
         endCanvas.SetActive( false );
         lifeCanvas.SetActive( false );
+        selectCanvas.SetActive( false );
         hudCanvas.SetActive( false );
 
         pLifeBarImage = pLifeBar.GetComponent<Image>();
@@ -91,6 +92,7 @@ public class BattleSystem : MonoBehaviour
                 }
                 endCanvas.SetActive( true );
                 hudCanvas.SetActive( false );
+                selectCanvas.SetActive( false );
             }
 
             if (endCanvas.activeSelf && Input.anyKeyDown) {
@@ -111,10 +113,16 @@ public class BattleSystem : MonoBehaviour
     }
 
     void SetUpGame() {
-        if (!hudCanvas.activeSelf && !endCanvas.activeSelf) {
+        if (!selectCanvas.activeSelf && !hudCanvas.activeSelf && !endCanvas.activeSelf) {
             waitCanvas.SetActive( false );
             lifeCanvas.SetActive( true );
-            hudCanvas.SetActive( true );
+            selectCanvas.SetActive( true );
+
+            if (!Globals.myTurn) {
+                selectText.text = "Seleccione un Personaje";
+            } else {
+                selectText.text = "Es el turno de su oponente";
+            }
 
             SetLifeBars();
             state = BattleState.START;
@@ -137,10 +145,11 @@ public class BattleSystem : MonoBehaviour
             eLifeBarImage.fillAmount = enemyLife / maxLife;
         } else if (enemyScore == (float)-1 && myScore != -1) {
             hudCanvas.SetActive( false );
+            selectCanvas.SetActive( false );
             waitCanvas.SetActive( true );
         } else if (myScore != -1 && enemyScore != -1) { // Cambiar las barras de vida
             waitCanvas.SetActive( false );
-            hudCanvas.SetActive( true );
+            selectCanvas.SetActive( true );
 
             if (myScore == enemyScore) {
                 return;
@@ -184,6 +193,8 @@ public class BattleSystem : MonoBehaviour
         ally1Unit.GetComponent<ObjectClicker>().hability2 = battleHUD.hability2text;
         ally1Unit.GetComponent<ObjectClicker>().hability3 = battleHUD.hability3text;
         ally1Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
+        ally1Unit.GetComponent<ObjectClicker>().hudCanvas = hudCanvas;
+        ally1Unit.GetComponent<ObjectClicker>().selectCanvas = selectCanvas;
 
         GameObject ally2GO = Instantiate(ally2prefab, ally2Tile);
         ally2Unit = ally2GO.GetComponent<Unit>();
@@ -193,6 +204,8 @@ public class BattleSystem : MonoBehaviour
         ally2Unit.GetComponent<ObjectClicker>().hability2 = battleHUD.hability2text;
         ally2Unit.GetComponent<ObjectClicker>().hability3 = battleHUD.hability3text;
         ally2Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
+        ally2Unit.GetComponent<ObjectClicker>().hudCanvas = hudCanvas;
+        ally2Unit.GetComponent<ObjectClicker>().selectCanvas = selectCanvas;
 
 
         GameObject ally3GO = Instantiate(ally3prefab, ally3Tile);
@@ -203,6 +216,8 @@ public class BattleSystem : MonoBehaviour
         ally3Unit.GetComponent<ObjectClicker>().hability2 = battleHUD.hability2text;
         ally3Unit.GetComponent<ObjectClicker>().hability3 = battleHUD.hability3text;
         ally3Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
+        ally3Unit.GetComponent<ObjectClicker>().hudCanvas = hudCanvas;
+        ally3Unit.GetComponent<ObjectClicker>().selectCanvas = selectCanvas;
 
 
         GameObject enemy1GO = Instantiate(enemy1prefab, enemy1Tile);
@@ -213,6 +228,8 @@ public class BattleSystem : MonoBehaviour
         enemy1Unit.GetComponent<ObjectClicker>().hability2 = battleHUD.hability2text;
         enemy1Unit.GetComponent<ObjectClicker>().hability3 = battleHUD.hability3text;
         enemy1Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
+        enemy1Unit.GetComponent<ObjectClicker>().hudCanvas = hudCanvas;
+        enemy1Unit.GetComponent<ObjectClicker>().selectCanvas = selectCanvas;
 
 
         GameObject enemy2GO = Instantiate(enemy2prefab, enemy2Tile);
@@ -223,6 +240,8 @@ public class BattleSystem : MonoBehaviour
         enemy2Unit.GetComponent<ObjectClicker>().hability2 = battleHUD.hability2text;
         enemy2Unit.GetComponent<ObjectClicker>().hability3 = battleHUD.hability3text;
         enemy2Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
+        enemy2Unit.GetComponent<ObjectClicker>().hudCanvas = hudCanvas;
+        enemy2Unit.GetComponent<ObjectClicker>().selectCanvas = selectCanvas;
 
 
         GameObject enemy3GO = Instantiate(enemy3prefab, enemy3Tile);
@@ -233,6 +252,8 @@ public class BattleSystem : MonoBehaviour
         enemy3Unit.GetComponent<ObjectClicker>().hability2 = battleHUD.hability2text;
         enemy3Unit.GetComponent<ObjectClicker>().hability3 = battleHUD.hability3text;
         enemy3Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
+        enemy3Unit.GetComponent<ObjectClicker>().hudCanvas = hudCanvas;
+        enemy3Unit.GetComponent<ObjectClicker>().selectCanvas = selectCanvas;
 
     }
 
