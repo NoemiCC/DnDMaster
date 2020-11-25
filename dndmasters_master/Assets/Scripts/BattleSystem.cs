@@ -63,6 +63,9 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
+        Globals.myTurn = !Globals.myTurn;
+        // Debug.Log("Mi turno: " + Globals.myTurn);
+
         endCanvas.SetActive( false );
         lifeCanvas.SetActive( false );
         selectCanvas.SetActive( false );
@@ -82,7 +85,7 @@ public class BattleSystem : MonoBehaviour
         if (Globals.playerCount == 2) {
             SetUpGame();
 
-            if (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0) {
+            if (!endCanvas.activeSelf && (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0)) {
                 if (pLifeBarImage.fillAmount == 0) {
                     resultTxt.text = "Que lastima, has perdido";
                     pointsTxt.text = "Has ganado $0";
@@ -90,17 +93,16 @@ public class BattleSystem : MonoBehaviour
                     resultTxt.text = "Felicidades! Has ganado";
                     pointsTxt.text = "Has ganado $100";
                 }
-                endCanvas.SetActive( true );
-                hudCanvas.SetActive( false );
-                selectCanvas.SetActive( false );
-            }
 
-            if (endCanvas.activeSelf && Input.anyKeyDown) {
                 money = PlayerPrefs.GetInt("money", 0);
                 if (eLifeBarImage.fillAmount == 0) {
                     PlayerPrefs.SetInt("money", money + 100);
                 }
-                SceneManager.LoadScene("InnScene");
+                Debug.Log("Added money");
+
+                endCanvas.SetActive( true );
+                hudCanvas.SetActive( false );
+                selectCanvas.SetActive( false );
             }
 
             if (Input.GetMouseButtonDown(0) && !endCanvas.activeSelf)
@@ -118,7 +120,7 @@ public class BattleSystem : MonoBehaviour
             lifeCanvas.SetActive( true );
             selectCanvas.SetActive( true );
 
-            if (!Globals.myTurn) {
+            if (Globals.myTurn) {
                 selectText.text = "Seleccione un Personaje";
             } else {
                 selectText.text = "Es el turno de su oponente";
@@ -181,7 +183,6 @@ public class BattleSystem : MonoBehaviour
             eLifeBarImage.fillAmount = enemyLife / maxLife;
         }
     }
-
 
     void SetupBattle() 
     {

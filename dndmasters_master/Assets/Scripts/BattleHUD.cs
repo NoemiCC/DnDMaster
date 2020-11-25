@@ -26,9 +26,6 @@ public class BattleHUD : MonoBehaviour
 
     void Start()
     {
-        Globals.myTurn = !Globals.myTurn;
-        // Debug.Log("Mi turno: " + Globals.myTurn);
-
         Button btn1 = hability1.GetComponent<Button>();
         Button btn2 = hability2.GetComponent<Button>();
         Button btn3 = hability3.GetComponent<Button>();
