@@ -10,6 +10,7 @@ using Photon.Pun;
 
 public class BattleHUD : MonoBehaviour
 {
+    public Text warningText;
     public Text nameText;
     public Button hability1;
     public Button hability2;
@@ -40,23 +41,43 @@ public class BattleHUD : MonoBehaviour
     void TaskOnClick1()
     {
         Text text = hability1.GetComponent<Button>().GetComponentInChildren<Text>();
-        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        if (text.text == "Adaggio" || text.text == "Bloqueo de Chi") {
+            warningText.text = "";
+            PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        } else {
+            warningText.text = "Esta habilidad no esta disponible";
+        }
     }
 
     void TaskOnClick2()
     {
         Text text = hability2.GetComponent<Button>().GetComponentInChildren<Text>();
-        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        if (text.text == "Meditar") {
+            warningText.text = "";
+            PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        } else {
+            warningText.text = "Esta habilidad no esta disponible";
+        }
     }
     void TaskOnClick3()
     {
         Text text = hability3.GetComponent<Button>().GetComponentInChildren<Text>();
-        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        if (text.text == "Patada alta") {
+            warningText.text = "";
+            PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        } else {
+            warningText.text = "Esta habilidad no esta disponible";
+        }
     }
     void TaskOnClick4()
     {
         Text text = hability4.GetComponent<Button>().GetComponentInChildren<Text>();
-        PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        if (text.text == "Réquiem" || text.text == "Velocidad extrema") {
+            warningText.text = "";
+            PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
+        } else {
+            warningText.text = "Esta habilidad no esta disponible";
+        }
     }
 
     public void SetHUD (Unit unit) {
