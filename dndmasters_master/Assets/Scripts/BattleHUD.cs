@@ -21,13 +21,11 @@ public class BattleHUD : MonoBehaviour
     public Text hability3text;
     public Text hability4text;
     
-    string myTurn;
+    public GameObject selectCanvas;
     public PhotonView PV;
 
     void Start()
     {
-        Globals.myTurn = !Globals.myTurn;
-
         Button btn1 = hability1.GetComponent<Button>();
         Button btn2 = hability2.GetComponent<Button>();
         Button btn3 = hability3.GetComponent<Button>();
@@ -67,16 +65,19 @@ public class BattleHUD : MonoBehaviour
 
     private void Update()
     {
-        if (Globals.myTurn) {
-            hability1.GetComponent<Button>().interactable = true;
-            hability2.GetComponent<Button>().interactable = true;
-            hability3.GetComponent<Button>().interactable = true;
-            hability4.GetComponent<Button>().interactable = true;
-        } else {
-            hability1.GetComponent<Button>().interactable = false;
-            hability2.GetComponent<Button>().interactable = false;
-            hability3.GetComponent<Button>().interactable = false;
-            hability4.GetComponent<Button>().interactable = false;
+        if (!selectCanvas.activeSelf) {
+            // Debug.Log("After select: " + Globals.myTurn);
+            if (Globals.myTurn) {
+                hability1.GetComponent<Button>().interactable = true;
+                hability2.GetComponent<Button>().interactable = true;
+                hability3.GetComponent<Button>().interactable = true;
+                hability4.GetComponent<Button>().interactable = true;
+            } else {
+                hability1.GetComponent<Button>().interactable = false;
+                hability2.GetComponent<Button>().interactable = false;
+                hability3.GetComponent<Button>().interactable = false;
+                hability4.GetComponent<Button>().interactable = false;
+            }
         }
     }
 }
