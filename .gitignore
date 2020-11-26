@@ -11,6 +11,7 @@
 [Ll]ocal[Cc]ache/
 [Mm]emoryCaptures/
 [Uu]nityGenerated/
+[Ww]GL/
 
 # file on crash reports
 sysinfo.txt
