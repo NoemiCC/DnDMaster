@@ -54,7 +54,7 @@ public class memoryGameController : MonoBehaviour
     }
 
         private void Update() {
-            if(Input.anyKeyDown)
+            if(Input.GetMouseButtonDown(0))
                 {
                     instructions.SetActive(false);
                     gameText.text = "";
