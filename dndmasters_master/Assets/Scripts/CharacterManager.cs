@@ -50,6 +50,7 @@ public class CharacterManager : MonoBehaviour
             sprite_object.SetActive(false);
             if (sprite_object.name == "Monk" || sprite_object.name == "Bard" || sprite_object.name == "Witch")
             {
+                Globals.myPlayers.Remove(sprite_object.name);
                 activeCharacters -= 1;
             }
         }
@@ -58,6 +59,7 @@ public class CharacterManager : MonoBehaviour
             sprite_object.SetActive(true);
             if (sprite_object.name == "Monk" || sprite_object.name == "Bard" || sprite_object.name == "Witch")
             {
+                Globals.myPlayers.Add(sprite_object.name);
                 activeCharacters += 1;
             }
         }

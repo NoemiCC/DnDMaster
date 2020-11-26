@@ -1,10 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections.Generic;
 using Photon.Pun;
 
 public class BattleManager : MonoBehaviourPunCallbacks
 {
+    [PunRPC]
+    void EnemyPlayers(string playersTxt) {
+        string[] players = playersTxt.Split(';');
+        int i = 0;
+        while (i < players.Length) {
+            Globals.enemyPlayers.Add(players[i]);
+            i++;
+        }
+        Debug.Log("Enemy players are ready");
+    }
+
     [PunRPC]
     void UpdatePlayerCount() {
         Globals.playerCount = PhotonNetwork.CurrentRoom.PlayerCount;

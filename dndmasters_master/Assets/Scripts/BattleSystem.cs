@@ -57,12 +57,15 @@ public class BattleSystem : MonoBehaviour
     Image pLifeBarImage;
     Image eLifeBarImage;
     public PhotonView PV;
+    bool first = false;
 
     
 
 
     void Start()
     {
+        Debug.Log(Globals.myPlayers[0]);
+
         endCanvas.SetActive( false );
         lifeCanvas.SetActive( false );
         hudCanvas.SetActive( false );
@@ -79,6 +82,11 @@ public class BattleSystem : MonoBehaviour
     private void Update()
     {
         if (Globals.playerCount == 2) {
+            if (!first) {
+                PV.RPC("EnemyPlayers", RpcTarget.Others, string.Join(";", Globals.myPlayers));
+                first = transform;
+            }
+
             SetUpGame();
 
             if (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0) {
@@ -173,7 +181,6 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-
     void SetupBattle() 
     {
         GameObject ally1GO = Instantiate(ally1prefab, ally1Tile);
@@ -205,6 +212,7 @@ public class BattleSystem : MonoBehaviour
         ally3Unit.GetComponent<ObjectClicker>().hability4 = battleHUD.hability4text;
 
 
+        Debug.Log("Setting up battle");
         GameObject enemy1GO = Instantiate(enemy1prefab, enemy1Tile);
         enemy1Unit = enemy1GO.GetComponent<Unit>();
         enemy1GO.transform.position += Vector3.up * 1;
