@@ -49,15 +49,15 @@ public class BattleManager : MonoBehaviourPunCallbacks
         //     SceneManager.LoadScene("CrackTheCode");
         // }
         // else if (what == "Raíces atrapadoras") {
-        //     PlayerPrefs.SetInt("game", 0);
+        //     PlayerPrefs.SetInt("game", 1);
         //     SceneManager.LoadScene("CrackTheCode");
         // } 
         // else if (what == "Semilla de curación") {
-        //     PlayerPrefs.SetInt("game", 0);
+        //     PlayerPrefs.SetInt("game", 2);
         //     SceneManager.LoadScene("CrackTheCode");
         // } 
         // else if (what == "Nube tóxica") {
-        //     PlayerPrefs.SetInt("game", 0);
+        //     PlayerPrefs.SetInt("game", 3);
         //     SceneManager.LoadScene("CrackTheCode");
         // }
     }
