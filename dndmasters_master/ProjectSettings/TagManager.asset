@@ -8,6 +8,7 @@ TagManager:
   - Point
   - Timer
   - Money
+  - Ability
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Info
+    uniqueID: 3098758497
     locked: 0

@@ -8,8 +8,8 @@ public class BattleManager : MonoBehaviourPunCallbacks
     [PunRPC]
     void UpdatePlayerCount() {
         Globals.playerCount = PhotonNetwork.CurrentRoom.PlayerCount;
-        Debug.Log(Globals.playerCount);
-        if (Globals.playerCount == 1) { Globals.myTurn = false; }
+        Debug.Log("Update player count " + Globals.playerCount);
+        if (Globals.playerCount == 1) { Globals.myTurn = true; }
     }
 
     [PunRPC]
@@ -53,11 +53,11 @@ public class BattleManager : MonoBehaviourPunCallbacks
             SceneManager.LoadScene("CrackTheCode");
         } 
         // else if (what == "Semilla de curación") {
-        //     PlayerPrefs.SetInt("game", 0);
+        //     PlayerPrefs.SetInt("game", 2);
         //     SceneManager.LoadScene("CrackTheCode");
         // } 
         // else if (what == "Nube tóxica") {
-        //     PlayerPrefs.SetInt("game", 0);
+        //     PlayerPrefs.SetInt("game", 3);
         //     SceneManager.LoadScene("CrackTheCode");
         // }
     }

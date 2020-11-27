@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 
@@ -9,8 +7,10 @@ public class LoadScreen : MonoBehaviour
     public void LoadScene( string sceneName ) 
     {
         if (sceneName == "InnScene" && PhotonNetwork.IsConnected) {
+            PhotonNetwork.LeaveRoom();
             PhotonNetwork.Disconnect();
-            // Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
+            Debug.Log("Disconect: " + PhotonNetwork.CurrentRoom.PlayerCount);
+            Globals.playerCount = 0;
         }
         SceneManager.LoadScene( sceneName );
     }
