@@ -26,7 +26,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message) {
-        Debug.Log("Error: " + returnCode + "-" + message);
+        // Debug.Log("Error: " + returnCode + "-" + message);
         Globals.myTurn = false;
         Debug.Log("Create Room");
         PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = 2 });

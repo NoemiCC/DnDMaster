@@ -41,7 +41,7 @@ public class BattleHUD : MonoBehaviour
     void TaskOnClick1()
     {
         Text text = hability1.GetComponent<Button>().GetComponentInChildren<Text>();
-        if (text.text == "Adaggio" || text.text == "Bloqueo de Chi") {
+        if (text.text == "Raíces atrapadoras" || text.text == "Adaggio" || text.text == "Bloqueo de Chi") {
             warningText.text = "";
             PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
         } else {
@@ -72,7 +72,7 @@ public class BattleHUD : MonoBehaviour
     void TaskOnClick4()
     {
         Text text = hability4.GetComponent<Button>().GetComponentInChildren<Text>();
-        if (text.text == "Réquiem" || text.text == "Velocidad extrema") {
+        if (text.text == "Invocación" || text.text == "Réquiem" || text.text == "Velocidad extrema") {
             warningText.text = "";
             PV.RPC("ReconMinigame", RpcTarget.All, text.text, nameText.text);
         } else {
