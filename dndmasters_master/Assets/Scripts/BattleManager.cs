@@ -44,14 +44,14 @@ public class BattleManager : MonoBehaviourPunCallbacks
             SceneManager.LoadScene("MonkGame");
         }
 
-        // if (what == "Invocación") {
-        //     PlayerPrefs.SetInt("game", 0);
-        //     SceneManager.LoadScene("CrackTheCode");
-        // }
-        // else if (what == "Raíces atrapadoras") {
-        //     PlayerPrefs.SetInt("game", 1);
-        //     SceneManager.LoadScene("CrackTheCode");
-        // } 
+        if (what == "Invocación") {
+            PlayerPrefs.SetInt("game", 0);
+            SceneManager.LoadScene("CrackTheCode");
+        }
+        else if (what == "Raíces atrapadoras") {
+            PlayerPrefs.SetInt("game", 1);
+            SceneManager.LoadScene("CrackTheCode");
+        } 
         // else if (what == "Semilla de curación") {
         //     PlayerPrefs.SetInt("game", 2);
         //     SceneManager.LoadScene("CrackTheCode");

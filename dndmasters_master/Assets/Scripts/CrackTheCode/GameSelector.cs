@@ -9,8 +9,8 @@ public class GameSelector : MonoBehaviour
     public GameObject memoryObject;
 
 
-    void Start()
-    {
+    void Start() {
+        gameMode = PlayerPrefs.GetInt("game", 0);
     }
 
     // Update is called once per frame
