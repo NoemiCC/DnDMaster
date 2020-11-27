@@ -10,8 +10,10 @@ public class GameStatus : MonoBehaviour
     public bool beginner = true;
 
     Text moneyText;
+    Text storeMoneyText;
     Text userText;
     public GameObject money;
+    public GameObject storeMoney;
     public GameObject userName;
 
     public AudioSource innMusic;
@@ -50,6 +52,8 @@ public class GameStatus : MonoBehaviour
     {
         moneyText = money.GetComponent<Text>();
         moneyText.text = "Dinero: $" + PlayerPrefs.GetInt("money", 0);
+        storeMoneyText = storeMoney.GetComponent<Text>();
+        storeMoneyText.text = "$" + PlayerPrefs.GetInt("money", 0);
     }
 
     public void ChangeUserName ()
