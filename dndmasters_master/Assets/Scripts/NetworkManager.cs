@@ -16,6 +16,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // }
 
     public void Connect() {
+        PhotonNetwork.PhotonServerSettings.AppSettings.FixedRegion = "us";
         PhotonNetwork.ConnectUsingSettings();
     }
 

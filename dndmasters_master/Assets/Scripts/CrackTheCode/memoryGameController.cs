@@ -78,7 +78,7 @@ public class memoryGameController : MonoBehaviour
             {
                 gameText.text = "Terminó el juego";
                 PlayerPrefs.SetFloat( "minigameScore", score );
-                PV.RPC("UpdatePoints", RpcTarget.Others, score);
+                PV.RPC("UpdatePoints", RpcTarget.Others, (float)score);
                 SceneManager.LoadScene("Campo_batalla");
             }
         }else {
