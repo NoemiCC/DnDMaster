@@ -15,7 +15,8 @@ public class CodeManager : MonoBehaviour
     public TextMeshProUGUI gameText;
     public GameObject instructions;
     public TextMeshProUGUI gameInstructions;
-
+    public int clicks = 0;
+    public GameObject runes;
     void Start()
     {
         int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
@@ -24,16 +25,15 @@ public class CodeManager : MonoBehaviour
         {
         scoreText.text = "Quedan:"; 
         gameText.text = "Conjuración";
-        gameInstructions.text = "Haz click en runas de la izquierda\n para probar combinaciones.\n" + 
-                                "El color de la runa seleccionada\nte indicará si acertaste, fallaste\n o estás cerca.\n\n" +
-                                "Descifra el código para ganar!";
+        gameInstructions.text = "Selecciona los íconos de la izquierda\npara formar combinaciones\n" +
+                                "de 3 runas.\n\n Tu selección aparecerá\nen las piedras de la derecha.";
 
         }else if(gameMode==1)
         {
         scoreText.text = "Puntaje:"; 
         gameText.text = "Alquimia";
         gameInstructions.text = "Haz click en las runas\n para darlas vuelta.\n" + 
-                                "¡Encuentra las parejas para ganar!\n\n" + 
+                                "¡Encuentra las parejas iguales para ganar!\n\n" + 
                                 "Importante: jugar lento para evitar bugs.";
         }
     }
@@ -41,22 +41,34 @@ public class CodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.parent.gameObject.GetComponent<GameSelector>().gameMode == 0)
+        int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
+        if(gameMode == 0)
         {
             if(!startPlaying)
             {
                 if(!gameOver)
                 {
-                    if(Input.anyKeyDown)
+                    if(Input.GetMouseButtonDown(0))
                     {
-                        instructions.SetActive(false);
-                        startPlaying = true;
-                        gameText.text = "";
+                        if(clicks==0) 
+                        {
+                            Debug.Log("mostrar las otras instrucciones");
+                            clicks += 1;
+                            gameInstructions.text = "¡Encuentra la secuencia correcta\nantes de que se acabe el tiempo!";
+                            runes.SetActive(true);
+                        }else if(clicks>=1)
+                            {
+                                instructions.SetActive(false);
+                                startPlaying = true;
+                                gameText.text = "";
+                                runes.SetActive(true);
+                            }
                     }
-                    scoreText.text = "Quedan: " + tries; 
+
                 }
-            
+                    scoreText.text = "Quedan: " + tries; 
             }
+            
             if(gameOver)
             {
                 startPlaying = false;
@@ -66,6 +78,4 @@ public class CodeManager : MonoBehaviour
 
 
     }
-
-
 }

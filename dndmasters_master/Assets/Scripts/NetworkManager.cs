@@ -12,6 +12,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public void Connect() {
+        PhotonNetwork.PhotonServerSettings.AppSettings.FixedRegion = "us";
         PhotonNetwork.ConnectUsingSettings();
     }
 
@@ -20,11 +21,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     public void Play() {
+        Debug.Log("Join Room");
         PhotonNetwork.JoinRandomRoom();
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message) {
+        // Debug.Log("Error: " + returnCode + "-" + message);
         Globals.myTurn = false;
+        Debug.Log("Create Room");
         PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = 2 });
     }
 
@@ -34,5 +38,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()   {
         PV.RPC("UpdatePlayerCount", RpcTarget.All);
+        Debug.Log("Leave Room");
     }
 }

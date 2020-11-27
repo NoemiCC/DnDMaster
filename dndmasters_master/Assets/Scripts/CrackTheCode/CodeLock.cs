@@ -95,7 +95,7 @@ public class CodeLock : MonoBehaviour
     {
         Debug.Log("Yeah!");
         PlayerPrefs.SetFloat( "minigameScore", CodeManager.instance.tries );
-        PV.RPC("UpdatePoints", RpcTarget.Others, CodeManager.instance.tries);
+        PV.RPC("UpdatePoints", RpcTarget.Others, (float)CodeManager.instance.tries);
         SceneManager.LoadScene("Campo_batalla");
     }
 
