@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         scoreText.text = "Score: " + score;
         gameText.text = "Requiem";
-        game = PlayerPrefs.GetInt("game", 0);
+        //game = PlayerPrefs.GetInt("game", 0);
         endCanvas.SetActive( false );
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - Point
   - Timer
   - Money
+  - MenuButton
   - Ability
   layers:
   - Default
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - PostProcessing
+  - Focus
   - 
   - 
   - 
