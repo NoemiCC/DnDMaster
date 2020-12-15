@@ -49,6 +49,7 @@ public class BattleSystem : MonoBehaviour
     public GameObject lifeCanvas;
     public GameObject endCanvas;
     public GameObject waitCanvas;
+    public GameObject aloneCanvas;
     public Text selectText;
     public Text resultTxt;
     public Text pointsTxt;
@@ -64,12 +65,12 @@ public class BattleSystem : MonoBehaviour
     void Start()
     {
         Globals.myTurn = !Globals.myTurn;
-        // Debug.Log("Mi turno: " + Globals.myTurn);
 
         endCanvas.SetActive( false );
         lifeCanvas.SetActive( false );
         selectCanvas.SetActive( false );
         hudCanvas.SetActive( false );
+        aloneCanvas.SetActive( false );
 
         pLifeBarImage = pLifeBar.GetComponent<Image>();
         eLifeBarImage = eLifeBar.GetComponent<Image>();
@@ -82,7 +83,13 @@ public class BattleSystem : MonoBehaviour
     }
     private void Update()
     {
+        // Debug.Log("Players: " + PhotonNetwork.CurrentRoom.PlayerCount);
+        
         if (Globals.playerCount == 2) {
+            if (PhotonNetwork.CurrentRoom.PlayerCount == 1) {
+                aloneCanvas.SetActive( true );
+            }
+
             SetUpGame();
 
             if (!endCanvas.activeSelf && (pLifeBarImage.fillAmount == 0 || eLifeBarImage.fillAmount == 0)) {
