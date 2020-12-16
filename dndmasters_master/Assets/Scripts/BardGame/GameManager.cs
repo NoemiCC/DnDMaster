@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         scoreText.text = "Score: " + score;
         gameText.text = "Requiem";
-        //game = PlayerPrefs.GetInt("game", 0);
+        game = PlayerPrefs.GetInt("game", 0);
         endCanvas.SetActive( false );
     }
 
@@ -54,16 +54,16 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Campo_batalla");
             }
         } else {
-            if(!startPlaying)
+            if (!startPlaying)
             {
-                if(!gameOver)
+                if (!gameOver)
                 {
-                    if(game==0)
+                    if (game == 0)
                     {
                         gameText.text = "Requiem";
                         instructionsText.text = "¡Atrapa todas las notas musicales para ganar!";
                         notesLeft = 16;
-                    } else if(game==1)
+                    } else if (game == 1)
                     {
                         gameText.text = "Adaggio";
                         instructionsText.text = "¡Evade las notas musicales para ganar!";
@@ -71,19 +71,19 @@ public class GameManager : MonoBehaviour
                     }
                     noteHolder1.SetActive( false );
                     noteHolder2.SetActive( false );
-                    if(Input.anyKeyDown)
+                    if (Input.anyKeyDown)
                     {
                         instructions.SetActive(false);
                         startPlaying = true;
                         gameText.text = "";
-                        if(game == 0)
+                        if (game == 0)
                         {
                             music00.Play();
                             StartCoroutine(FadeAudioSource.StartFade(music00, 2, 0.65f));
                             noteHolder1.SetActive( true );
                             notesController00.hasStarted = true;
                         }
-                        else if(game == 1)
+                        else if (game == 1)
                         {
                             music01.Play();
                             StartCoroutine(FadeAudioSource.StartFade(music01, 2, 0.65f));
@@ -113,10 +113,10 @@ public class GameManager : MonoBehaviour
     public void NoteHit()
     {
         notesLeft -= 1;
-        if(game==0)
+        if (game == 0)
         {
             score += 1;
-        } else if(game==1)
+        } else if (game == 1)
         {
             failSound.Play();
         }
@@ -126,11 +126,9 @@ public class GameManager : MonoBehaviour
     public void NoteMissed()
     {
         notesLeft -= 1;
-        if(game==1)
-        {
+        if (game == 1) {
             score += 1;
-        } else if(game==0)
-        {
+        } else if (game == 0) {
             failSound.Play();
         }
         scoreText.text = "Score: " + score;
