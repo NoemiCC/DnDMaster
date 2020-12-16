@@ -82,9 +82,7 @@ public class BattleSystem : MonoBehaviour
         PlayerPrefs.SetFloat( "enemyScore", -1 );
     }
     private void Update()
-    {
-        // Debug.Log("Players: " + PhotonNetwork.CurrentRoom.PlayerCount);
-        
+    {        
         if (Globals.playerCount == 2) {
             if (PhotonNetwork.CurrentRoom.PlayerCount == 1) {
                 aloneCanvas.SetActive( true );
