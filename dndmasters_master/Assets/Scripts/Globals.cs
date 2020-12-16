@@ -5,6 +5,8 @@
      public static int playerCount = 0;
 
      public static bool myTurn = true;
+
+     // public static bool fullscreen = false;
      
  }
  

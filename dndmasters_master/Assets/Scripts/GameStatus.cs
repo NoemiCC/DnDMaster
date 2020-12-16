@@ -18,7 +18,6 @@ public class GameStatus : MonoBehaviour
 
     public AudioSource innMusic;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -60,10 +59,5 @@ public class GameStatus : MonoBehaviour
     {
         userText = userName.GetComponent<Text>();
         userText.text = "Usuario: " + PlayerPrefs.GetString("username", "Anon");
-    }
-
-    public void SetFullScreen (bool isFullScreen) // Linkear con el menu de opciones
-    {
-        Screen.fullScreen = isFullScreen;
     }
 }
