@@ -21,6 +21,7 @@ public class memoryGameController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameText;
     public GameObject instructions;
+    public BoxCollider2D blocker;
     public CodeManager uiController;
 
     void Start()
@@ -59,14 +60,15 @@ public class memoryGameController : MonoBehaviour
                     instructions.SetActive(false);
                     gameText.text = "";
                 }
-                scoreText.text = "Puntaje: " + score; 
+                scoreText.text = "Puntaje: " + score;
+
         }
         public IEnumerator checkEqual()
     {
         Debug.Log("Serán iguales?");
         ChangeSprite runeScript0 = runesSelected[0].GetComponent<ChangeSprite>();
         ChangeSprite runeScript1 = runesSelected[1].GetComponent<ChangeSprite>();
-        if(runeScript0.memorySprite == runeScript1.memorySprite)
+        if (runeScript0.memorySprite == runeScript1.memorySprite && runesSelected[0] != runesSelected[1])
         {
             Debug.Log("Son iguales!!!");
             runeScript0.GetComponent<SpriteRenderer>().sprite = runeScript0.rightSprites[runeScript0.memorySprite - 1];
@@ -83,11 +85,15 @@ public class memoryGameController : MonoBehaviour
             }
         }else {
             Debug.Log("No son iguales D:");
+            blocker.enabled = true;
             yield return new WaitForSeconds(0.7f);
+            blocker.enabled = false;
             Debug.Log("asdasd");
             runeScript0.GetComponent<SpriteRenderer>().sprite = runeScript0.vainillaSprites[0];
             runeScript1.GetComponent<SpriteRenderer>().sprite = runeScript1.vainillaSprites[0];
+
         }
+
         selected = 0;
         runesSelected.Clear();
 
