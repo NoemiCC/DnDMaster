@@ -50,9 +50,9 @@ public class GameStatus : MonoBehaviour
     public void ChangeCoins ()
     {
         moneyText = money.GetComponent<Text>();
-        moneyText.text = "Dinero: $" + PlayerPrefs.GetInt("money", 0);
+        moneyText.text = "Dinero: $" + PlayerPrefs.GetInt("money");
         storeMoneyText = storeMoney.GetComponent<Text>();
-        storeMoneyText.text = "$" + PlayerPrefs.GetInt("money", 0);
+        storeMoneyText.text = "$" + PlayerPrefs.GetInt("money");
     }
 
     public void ChangeUserName ()

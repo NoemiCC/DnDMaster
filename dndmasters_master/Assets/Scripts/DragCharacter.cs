@@ -15,7 +15,7 @@ public class DragCharacter : MonoBehaviour
     private bool room3;
     private bool room4;
 
-    public GameObject room;
+    private GameObject room;
     
     // Start is called before the first frame update
     void Start()
@@ -104,8 +104,8 @@ public class DragCharacter : MonoBehaviour
             room.name = "room_1_taken";
 
             // Desactivar halo por overrite de OnTriggerExit2D
-            var room2 = GameObject.Find("Inn/room1/halo_room1");
-            room2.SetActive(false);
+            var room_t = GameObject.Find("Inn/room1/halo_room1");
+            room_t.SetActive(false);
 
             this.GetComponent<Collider2D>().enabled = false;
             transform.position = newpos1;
@@ -113,12 +113,12 @@ public class DragCharacter : MonoBehaviour
         else if (room2 == true)
         {
             // Cambiar de nombre -  habitacion tomada
-            room = GameObject.Find("Inn/room1/room_2");
+            room = GameObject.Find("Inn/room2/room_2");
             room.name = "room_2_taken";
 
             // Desactivar halo por overrite de OnTriggerExit2D
-            var room2 = GameObject.Find("Inn/room2/halo_room2");
-            room2.SetActive(false);
+            var room_t = GameObject.Find("Inn/room2/halo_room2");
+            room_t.SetActive(false);
 
             transform.position = newpos2;
             this.GetComponent<Collider2D>().enabled = false;
@@ -130,8 +130,8 @@ public class DragCharacter : MonoBehaviour
             room.name = "room_3_taken";
 
             // Desactivar halo por overrite de OnTriggerExit2D
-            var room2 = GameObject.Find("Inn/room3/halo_room3");
-            room2.SetActive(false);
+            var room_t = GameObject.Find("Inn/room3/halo_room3");
+            room_t.SetActive(false);
 
             transform.position = newpos3;
             this.GetComponent<Collider2D>().enabled = false;
@@ -143,8 +143,8 @@ public class DragCharacter : MonoBehaviour
             room.name = "room_4_taken";
 
             // Desactivar halo por overrite de OnTriggerExit2D
-            var room2 = GameObject.Find("Inn/room4/halo_room4");
-            room2.SetActive(false);
+            var room_t = GameObject.Find("Inn/room4/halo_room4");
+            room_t.SetActive(false);
 
             transform.position = newpos4;
             this.GetComponent<Collider2D>().enabled = false;
@@ -156,5 +156,3 @@ public class DragCharacter : MonoBehaviour
     }
 
 }
-// this.GetComponent<Collider2D>().enabled = false;
-
