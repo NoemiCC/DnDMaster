@@ -1,23 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void NextScene()
-    {
-    	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    public InputField nameInput;
+    
+    public void LoadScene( string sceneName ) {
 
-    public void PreviousScene()
-    {
-    	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        if ( nameInput.text != "" ) {
+            PlayerPrefs.SetString( "username", nameInput.text );
+    	    SceneManager.LoadScene( sceneName );
+        } else {
+            //nameInput.text = "¡Necesitas un nombre!";
+            StartCoroutine(UserErrorCoroutine());
+        }
+        
     }
 
     public void QuitGame()
     {
-    	Debug.Log("Exit the Game");
     	Application.Quit();
+    }
+
+    IEnumerator UserErrorCoroutine()
+    {
+        nameInput.text = "¡Necesitas un nombre!";
+        yield return new WaitForSeconds(1);
+        nameInput.text = "";
     }
 }

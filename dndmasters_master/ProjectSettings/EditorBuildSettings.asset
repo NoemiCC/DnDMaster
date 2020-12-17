@@ -6,12 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/scene_portada.unity
+    path: Assets/Scenes/StartScene.unity
     guid: 8e351c45be5e24f65926e7698b404e3e
   - enabled: 1
-    path: Assets/Scenes/scenes_inn.unity
+    path: Assets/Scenes/Campo_batalla.unity
+    guid: df0c00c529fd2fa4691712b634a2fed6
+  - enabled: 1
+    path: Assets/Scenes/ChatScene.unity
+    guid: 617b78acb2b28b4468f37b348906ebf0
+  - enabled: 1
+    path: Assets/Scenes/InnScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/scene_battle.unity
-    guid: 71ece7663efdc48aeb6b9fdb962abbfb
+    path: Assets/Scenes/MonkGame.unity
+    guid: 44429c3e3118d4529a2f14d11bcfac14
+  - enabled: 1
+    path: Assets/Scenes/MusicGame.unity
+    guid: cfe8ba2d4ac8a1e46b30886a180d6436
+  - enabled: 1
+    path: Assets/Scenes/CrackTheCode.unity
+    guid: bc4f016fabd58a74cb140a638a3868c5
   m_configObjects: {}
