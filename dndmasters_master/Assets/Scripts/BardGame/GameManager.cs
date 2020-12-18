@@ -62,13 +62,12 @@ public class GameManager : MonoBehaviour
                     {
                         gameText.text = "Requiem";
                         instructionsText.text = "¡Atrapa todas las notas musicales para ganar!";
-                        notesLeft = 62;
-                    } else if(game==1)
-
+                        notesLeft = 16;
+                    } else if (game == 1)
                     {
                         gameText.text = "Adaggio";
                         instructionsText.text = "¡Evade las notas musicales para ganar!";
-                        notesLeft = 30;
+                        notesLeft = 32;
                     }
                     noteHolder1.SetActive( false );
                     noteHolder2.SetActive( false );
@@ -97,8 +96,8 @@ public class GameManager : MonoBehaviour
             if(notesLeft <= 0)
             {
                 startPlaying = false;
-                StartCoroutine(FadeAudioSource.StartFade(music00, 1, 0));
-                StartCoroutine(FadeAudioSource.StartFade(music01, 1, 0));
+                StartCoroutine(FadeAudioSource.StartFade(music00, 3, 0));
+                StartCoroutine(FadeAudioSource.StartFade(music01, 3, 0));
                 notesController00.hasStarted = false;
                 notesController01.hasStarted = false;
                 gameText.text = "Fin del juego";
