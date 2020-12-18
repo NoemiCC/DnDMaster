@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
                     {
                         gameText.text = "Requiem";
                         instructionsText.text = "¡Atrapa todas las notas musicales para ganar!";
-                        notesLeft = 62;
+                        notesLeft = 49;
                     } else if(game==1)
                     {
                         gameText.text = "Adaggio";
