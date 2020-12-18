@@ -16,14 +16,12 @@ public class GameSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameMode == 0)
-        {
-        codeObject.SetActive( true );
-        memoryObject.SetActive( false );
-        }else if(gameMode == 1)
-        {
-        codeObject.SetActive( false );
-        memoryObject.SetActive( true ); 
+        if (gameMode == 0) {
+            codeObject.SetActive( true );
+            memoryObject.SetActive( false );
+        } else if (gameMode == 1) {
+            codeObject.SetActive( false );
+            memoryObject.SetActive( true ); 
         }
     }
 }

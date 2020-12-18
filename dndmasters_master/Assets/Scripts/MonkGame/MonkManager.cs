@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MonkManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class MonkManager : MonoBehaviour
     public GameObject rulesCanvas;
 
     public GameObject endCanvas;
+
+    public TMP_Text titulo;
 
     GameObject gameCanvas;
     bool startGame = false;
@@ -31,25 +34,25 @@ public class MonkManager : MonoBehaviour
             gameCanvas2.SetActive( false );
             gameCanvas3.SetActive( false );
             gameCanvas = gameCanvas0;
-            // Titulo.GetComponent<Text>().text = "Bloqueo de Chi";
+            titulo.text = "Bloqueo de Chi";
         } else if (game == 1) {
             gameCanvas0.SetActive( false );
             gameCanvas2.SetActive( false );
             gameCanvas3.SetActive( false );
             gameCanvas = gameCanvas1;
-            // Titulo.GetComponent<Text>().text = "Meditar";
+            titulo.text = "Meditar";
         } else if (game == 2) {
             gameCanvas0.SetActive( false );
             gameCanvas1.SetActive( false );
             gameCanvas3.SetActive( false );
             gameCanvas = gameCanvas2;
-            // Titulo.GetComponent<Text>().text = "Patada alta";
+            titulo.text = "Patada alta";
         } else if (game == 3) {
             gameCanvas0.SetActive( false );
             gameCanvas1.SetActive( false );
             gameCanvas2.SetActive( false );
             gameCanvas = gameCanvas3;
-            // Titulo.GetComponent<Text>().text = "Velocidad extrema";
+            titulo.text = "Velocidad extrema";
         }
         
         gameCanvas.SetActive( false );
