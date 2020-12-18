@@ -17,10 +17,14 @@ public class CodeManager : MonoBehaviour
     public TextMeshProUGUI gameInstructions;
     public int clicks = 0;
     public GameObject runes;
+    public AudioSource music;
+
     void Start()
     {
         int gameMode = transform.parent.gameObject.GetComponent<GameSelector>().gameMode;
         instance = this;
+        music.Play();
+        StartCoroutine(FadeAudioSource.StartFade(music, 2, 0.65f));
         if(gameMode==0)
         {
         scoreText.text = "Quedan:"; 
@@ -72,6 +76,7 @@ public class CodeManager : MonoBehaviour
             if(gameOver)
             {
                 startPlaying = false;
+                StartCoroutine(FadeAudioSource.StartFade(music, 1, 0));
                 gameText.text = "Terminó el juego";
             }
         }
