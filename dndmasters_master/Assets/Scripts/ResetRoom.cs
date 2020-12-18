@@ -33,6 +33,30 @@ public class ResetRoom : MonoBehaviour
         {
         	button.SetActive(true);
         }
+
+        if (this.name.Contains("1") == true && Globals.taken_room1)
+        {
+            button.SetActive(true);
+        }
+
+
+        if (this.name.Contains("2") == true && Globals.taken_room2)
+        {
+            button.SetActive(true);
+        }
+
+
+        if (this.name.Contains("3") == true && Globals.taken_room3)
+        {
+            button.SetActive(true);
+        }
+
+
+        if (this.name.Contains("4") == true && Globals.taken_room4)
+        {
+            button.SetActive(true);
+        }
+
         else
         {
         	o_b1.SetActive(false);
