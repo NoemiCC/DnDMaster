@@ -23,11 +23,15 @@ public class memoryGameController : MonoBehaviour
     public GameObject instructions;
     public BoxCollider2D blocker;
     public CodeManager uiController;
+    public AudioSource music;
+
 
     void Start()
     {
         scoreText.text = "Puntaje:"; 
         gameText.text = "Alquimia";
+        music.Play();
+        StartCoroutine(FadeAudioSource.StartFade(music, 2, 0.65f));
         System.Random rnd = new System.Random();
         List<int> listNumbers = new List<int>();
         int number;
@@ -79,6 +83,7 @@ public class memoryGameController : MonoBehaviour
             if(score == runes/2)
             {
                 gameText.text = "Terminó el juego";
+                StartCoroutine(FadeAudioSource.StartFade(music, 1, 0));
                 PlayerPrefs.SetFloat( "minigameScore", score );
                 PV.RPC("UpdatePoints", RpcTarget.Others, (float)score);
                 SceneManager.LoadScene("Campo_batalla");
