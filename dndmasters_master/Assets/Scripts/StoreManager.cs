@@ -12,15 +12,22 @@ public class StoreManager : MonoBehaviour
 
 	public static string[ ] storeItems = new string[ ]{"plantita", "velita", "planta", "escudo","libros","cuadro","espada"} ;
 
-	string dummyString;
+	string dummyString1;
+	string dummyString2;
+
+	// pages
+	public int pagina_actual;
+    public Text pageText;
 
     // Start is called before the first frame update
     void Start()
     {
+    	pagina_actual = 1;
     	PlayerPrefs.SetInt("money", 5000);
         money = PlayerPrefs.GetInt("money");
 
-        // MostrarCompras();
+        // RefreshCompras();
+        MostrarCompras();
     }
 
     // Update is called once per frame
@@ -107,17 +114,94 @@ public class StoreManager : MonoBehaviour
         	{
         		for (int k = 1; k <= 3; k++)
         		{
-        			dummyString = $"Inn/room{i}/{storeItems[j]}{k}";
-        			Debug.Log(dummyString);
+        			dummyString1 = $"Inn/room{i}/{storeItems[j]}{k}";
         			
         			if (PlayerPrefs.GetInt($"{storeItems[j]}{k}_r{i}") == 1)
         			{
-        				var show = GameObject.Find(dummyString);
+        				var show = GameObject.Find(dummyString1);
         				show.SetActive(true);
         			}
         		}
         	}
         }
 
+    }
+
+    void RefreshCompras()
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+        	for (int j = 0; j <= storeItems.Length-1; j++)
+        	{
+        		for (int k = 1; k <= 3; k++)
+        		{
+    				PlayerPrefs.DeleteKey($"{storeItems[j]}{k}_r{i}");
+        		}
+        	}
+        }
+    }
+
+    public void AddPage(GameObject panel)
+    {
+    	if (pagina_actual < 4)
+    	{
+			pagina_actual += 1;
+			
+			var page1 = panel.transform.Find("Objetos").gameObject;
+			var page2 = panel.transform.Find("Objetos_2").gameObject;
+			var page3 = panel.transform.Find("Objetos_3").gameObject;
+			var page4 = panel.transform.Find("Objetos_4").gameObject;
+	    	
+	    	if (pagina_actual == 2)
+	    	{
+				page1.SetActive(false);
+				page2.SetActive(true);
+	    	}
+
+	    	else if (pagina_actual == 3)
+	    	{
+				page2.SetActive(false);
+				page3.SetActive(true);
+	    	}
+
+	    	else if (pagina_actual == 4)
+	    	{
+				page3.SetActive(false);
+				page4.SetActive(true);
+	    	}
+    	}
+        pageText.text = "Pag " + pagina_actual;
+    }
+
+    public void MinusPage(GameObject panel)
+    {
+    	if (1 < pagina_actual)
+    	{
+			pagina_actual -= 1;
+			
+			var page1 = panel.transform.Find("Objetos").gameObject;
+			var page2 = panel.transform.Find("Objetos_2").gameObject;
+			var page3 = panel.transform.Find("Objetos_3").gameObject;
+			var page4 = panel.transform.Find("Objetos_4").gameObject;
+	    	
+	    	if (pagina_actual == 1)
+	    	{
+				page1.SetActive(true);
+				page2.SetActive(false);
+	    	}
+			
+	    	else if (pagina_actual == 2)
+	    	{
+				page2.SetActive(true);
+				page3.SetActive(false);
+	    	}
+			
+	    	else if (pagina_actual == 3)
+	    	{
+				page3.SetActive(true);
+				page4.SetActive(false);
+	    	}
+    	}
+        pageText.text = "Pag " + pagina_actual;
     }
 }
