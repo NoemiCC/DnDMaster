@@ -23,7 +23,7 @@ public class StoreManager : MonoBehaviour
     void Start()
     {
     	pagina_actual = 1;
-    	// PlayerPrefs.SetInt("money", 5000);
+    	// PlayerPrefs.SetInt("money", 100);
         money = PlayerPrefs.GetInt("money");
 
         // RefreshCompras();
