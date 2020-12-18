@@ -28,7 +28,6 @@ public class MonkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         game = PlayerPrefs.GetInt("game", 0);
-        
         if (game == 0) {
             gameCanvas1.SetActive( false );
             gameCanvas2.SetActive( false );
@@ -67,7 +66,7 @@ public class MonkManager : MonoBehaviour
             gameCanvas.SetActive( true );
             rulesCanvas.SetActive( false );
         }
-
+        
         if (endCanvas.activeSelf && Input.anyKeyDown) {
             SceneManager.LoadScene("Campo_batalla");
         }

@@ -23,6 +23,8 @@ public class MonkPlayer : MonoBehaviour
     bool gameOver = false;
 
     public PhotonView PV;
+    public AudioSource music;
+
     
 
     private void Awake() {
@@ -32,6 +34,8 @@ public class MonkPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         game = PlayerPrefs.GetInt("game", 0);
+        music.Play();
+        StartCoroutine(FadeAudioSource.StartFade(music, 2, 0.65f));
         if (game == 0) { maxTime = 10f; maxPoints = 5; }
         else if (game == 1) { maxTime = 8f; maxPoints = 6; }
         else if (game == 2) { maxTime = 7f; maxPoints = 7; }
@@ -59,6 +63,7 @@ public class MonkPlayer : MonoBehaviour
             endTitle.text = "Se acabo el tiempo";
             endPoints.text += "0";
             gameOver = true;
+            StartCoroutine(FadeAudioSource.StartFade(music, 1, 0));
             PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
         }
     }
@@ -76,6 +81,8 @@ public class MonkPlayer : MonoBehaviour
                 endTitle.text = "Lo lograste!";
                 endPoints.text += "10";
                 gameOver = true;
+                StartCoroutine(FadeAudioSource.StartFade(music, 1, 0));
+
                 PV.RPC("UpdatePoints", RpcTarget.Others, (float)10);
             }
 
@@ -87,6 +94,7 @@ public class MonkPlayer : MonoBehaviour
             endTitle.text = "Has presionado un punto equivocado";
             endPoints.text += "0";
             gameOver = true;
+            StartCoroutine(FadeAudioSource.StartFade(music, 1, 0));
             PV.RPC("UpdatePoints", RpcTarget.Others, (float)0);
         }
     }
