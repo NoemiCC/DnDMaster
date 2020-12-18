@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
 	public GameObject selectFirst_text;
 
 	private Queue<string> sentences;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +62,8 @@ public class DialogueManager : MonoBehaviour
 	{
 		if (sentences.Count == 0)
 		{
+	        var prev_highlight = GameObject.Find("Canvas/UI_InnMenu_2/StoreButton/highlight");
+			prev_highlight.SetActive(false);
 			EndDialogue();
 			return;
 		}
@@ -69,16 +71,31 @@ public class DialogueManager : MonoBehaviour
 		if (sentences.Count == 4)
 		{
 			ShowCharacterMenu();
+	        var highlight = GameObject.Find("Canvas/UI_InnMenu_1/CharactersButton/highlight");
+			highlight.SetActive(true);
 		}
 
 		if (sentences.Count == 3)
 		{
 			ShowChatMenu();
+	        var prev_highlight = GameObject.Find("Canvas/UI_InnMenu_1/CharactersButton/highlight");
+			prev_highlight.SetActive(false);
+	        var highlight = GameObject.Find("Canvas/UI_InnMenu_1/ChatButton/highlight");
+			highlight.SetActive(true);
+		}
+
+
+		if (sentences.Count == 2)
+		{
+	        var prev_highlight = GameObject.Find("Canvas/UI_InnMenu_1/ChatButton/highlight");
+			prev_highlight.SetActive(false);
 		}
 
 		if (sentences.Count == 1)
 		{
 			dialogueText.fontSize = 12;
+	        var highlight = GameObject.Find("Canvas/UI_InnMenu_2/StoreButton/highlight");
+			highlight.SetActive(true);
 		}
 
 		string sentence = sentences.Dequeue();
