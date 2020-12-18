@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StoreManager : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class StoreManager : MonoBehaviour
 	public int pagina_actual;
     public Text pageText;
     public GameObject panel;
+    public TMP_Text warning;
 
     // Start is called before the first frame update
     void Start()
     {
     	pagina_actual = 1;
-    	PlayerPrefs.SetInt("money", 5000);
+    	PlayerPrefs.SetInt("money", 100);
         money = PlayerPrefs.GetInt("money");
 
         // RefreshCompras();
@@ -71,8 +73,9 @@ public class StoreManager : MonoBehaviour
 
     public void CheckValue(GameObject sprite_object)
     {
-        if (money > object_value)
+        if (money >= object_value)
         {
+            warning.text = "Usa las monedas para mejorar la posada";
         	money = money - object_value;
         	PlayerPrefs.SetInt("money", money);
 
@@ -91,6 +94,7 @@ public class StoreManager : MonoBehaviour
 		else
 		{
 			Debug.Log("Dinero insuficiente");
+            warning.text = "¡No te alcanza el dinero! Ve a la batalla";
 		}
     }
 

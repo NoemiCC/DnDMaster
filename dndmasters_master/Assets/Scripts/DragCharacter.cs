@@ -14,13 +14,36 @@ public class DragCharacter : MonoBehaviour
     private bool room2;
     private bool room3;
     private bool room4;
-
     private GameObject room;
     
     // Start is called before the first frame update
     void Start()
     {
-        zeropos = transform.position; 
+        zeropos = transform.position;
+        
+        // reset all
+        // PlayerPrefs.DeleteKey(this.name);
+
+        if (PlayerPrefs.GetString(this.name) == "room1")
+        {
+            transform.position = newpos1;
+            this.GetComponent<Collider2D>().enabled = false;
+        }
+        if (PlayerPrefs.GetString(this.name) == "room2")
+        {
+            transform.position = newpos2;
+            this.GetComponent<Collider2D>().enabled = false;
+        }
+        if (PlayerPrefs.GetString(this.name) == "room3")
+        {
+            transform.position = newpos3;
+            this.GetComponent<Collider2D>().enabled = false;
+        }
+        if (PlayerPrefs.GetString(this.name) == "room4")
+        {
+            transform.position = newpos4;
+            this.GetComponent<Collider2D>().enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -56,32 +79,39 @@ public class DragCharacter : MonoBehaviour
             room = GameObject.Find("Inn/room4/halo_room4");
             room.SetActive(true);
         }
+        else
+        {
+            room1 = false;
+            room2 = false;
+            room3 = false;
+            room4 = false;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.name == "room_1")
+        if (other.gameObject.name == "room_1" || other.gameObject.name == "room_1_taken")
         {
             room1 = false;
             room = GameObject.Find("Inn/room1/halo_room1");
             room.SetActive(false);
             // Debug.Log("Out " + other.gameObject.name + " bool " + room1);
         }
-        else if (other.gameObject.name == "room_2")
+        else if (other.gameObject.name == "room_2" || other.gameObject.name == "room_2_taken")
         {
             room2 = false;
             room = GameObject.Find("Inn/room2/halo_room2");
             room.SetActive(false);
         }
 
-        else if (other.gameObject.name == "room_3")
+        else if (other.gameObject.name == "room_3" || other.gameObject.name == "room_3_taken")
         {
             room3 = false;
             room = GameObject.Find("Inn/room3/halo_room3");
             room.SetActive(false);
         }
 
-        else if (other.gameObject.name == "room_4")
+        else if (other.gameObject.name == "room_4" || other.gameObject.name == "room_4_taken")
         {
             room4 = false;
             room = GameObject.Find("Inn/room4/halo_room4");
@@ -109,6 +139,9 @@ public class DragCharacter : MonoBehaviour
 
             this.GetComponent<Collider2D>().enabled = false;
             transform.position = newpos1;
+
+            PlayerPrefs.SetString(this.name, "room1");
+            Globals.taken_room1 = true;
         }
         else if (room2 == true)
         {
@@ -122,6 +155,8 @@ public class DragCharacter : MonoBehaviour
 
             transform.position = newpos2;
             this.GetComponent<Collider2D>().enabled = false;
+            PlayerPrefs.SetString(this.name, "room2");
+            Globals.taken_room2 = true;
         }
         else if (room3 == true)
         {
@@ -135,6 +170,8 @@ public class DragCharacter : MonoBehaviour
 
             transform.position = newpos3;
             this.GetComponent<Collider2D>().enabled = false;
+            PlayerPrefs.SetString(this.name, "room3");
+            Globals.taken_room3 = true;
         }
         else if (room4 == true)
         {
@@ -148,6 +185,8 @@ public class DragCharacter : MonoBehaviour
 
             transform.position = newpos4;
             this.GetComponent<Collider2D>().enabled = false;
+            PlayerPrefs.SetString(this.name, "room4");
+            Globals.taken_room4 = true;
         }
         else
         {

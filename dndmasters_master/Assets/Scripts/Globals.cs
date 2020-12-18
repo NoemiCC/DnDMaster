@@ -6,11 +6,9 @@
 
     public static bool myTurn = true;
 
-    public static bool room1_e1 = false;
-    public static bool room2_e1 = false;
-    public static bool room3_e1 = false;
-    public static bool room4_e1 = false;
-
-     // public static bool fullscreen = false;
+    public static bool taken_room1 = false;
+    public static bool taken_room2 = false;
+    public static bool taken_room3 = false;
+    public static bool taken_room4 = false;
  }
  
