@@ -375,7 +375,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 2a19a52877a3a4e988d44ec115e78a47, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: d01f28a43a26a411684e46a52bb7a418, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: e40d64589b09f4009874fc81999956b0, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 8edfb55fde1084d45b6602e6dcc449d5, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2818,7 +2818,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 2a19a52877a3a4e988d44ec115e78a47, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: d01f28a43a26a411684e46a52bb7a418, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: e40d64589b09f4009874fc81999956b0, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 8edfb55fde1084d45b6602e6dcc449d5, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3923,7 +3923,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 2a19a52877a3a4e988d44ec115e78a47, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: d01f28a43a26a411684e46a52bb7a418, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: e40d64589b09f4009874fc81999956b0, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 8edfb55fde1084d45b6602e6dcc449d5, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -4664,7 +4664,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300000, guid: 2a19a52877a3a4e988d44ec115e78a47, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: d01f28a43a26a411684e46a52bb7a418, type: 3}
     m_SelectedSprite: {fileID: 21300000, guid: e40d64589b09f4009874fc81999956b0, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: 8edfb55fde1084d45b6602e6dcc449d5, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
