@@ -18,16 +18,18 @@ public class StoreManager : MonoBehaviour
 	// pages
 	public int pagina_actual;
     public Text pageText;
+    public GameObject panel;
 
     // Start is called before the first frame update
     void Start()
     {
     	pagina_actual = 1;
-    	// PlayerPrefs.SetInt("money", 100);
+    	PlayerPrefs.SetInt("money", 5000);
         money = PlayerPrefs.GetInt("money");
 
         // RefreshCompras();
         MostrarCompras();
+        MostrarVentas(panel);
     }
 
     // Update is called once per frame
@@ -124,8 +126,44 @@ public class StoreManager : MonoBehaviour
         		}
         	}
         }
-
     }
+
+
+    void MostrarVentas(GameObject panel)
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+        	for (int j = 0; j <= storeItems.Length-1; j++)
+        	{
+        		for (int k = 1; k <= 3; k++)
+        		{
+        			dummyString1 = $"{storeItems[j]}{k}/Image";
+        			
+        			if (PlayerPrefs.GetInt($"{storeItems[j]}{k}_r{i}") == 1)
+        			{
+        				for (int l = 1; l <= 4; l++)
+        				{
+        					for (int m = 1; m <= 5; m++)
+        					{
+        						try
+        						{
+			        				var disable = panel.transform.Find($"Objetos_{l}/Class_{m}/{storeItems[j]}{k}").gameObject;
+			        				var show = panel.transform.Find($"Objetos_{l}/Class_{m}/{storeItems[j]}{k}/Image").gameObject;
+			        				// Debug.Log(show);
+			        				// Debug.Log(dummyString1);
+		        					show.SetActive(true);
+									disable.GetComponent<Button>().interactable = false;
+        						}
+        						catch
+        						{
+        						}
+							}
+        				}
+        			}
+        		}
+        	}
+        }
+    } 
 
     void RefreshCompras()
     {
@@ -147,7 +185,7 @@ public class StoreManager : MonoBehaviour
     	{
 			pagina_actual += 1;
 			
-			var page1 = panel.transform.Find("Objetos").gameObject;
+			var page1 = panel.transform.Find("Objetos_1").gameObject;
 			var page2 = panel.transform.Find("Objetos_2").gameObject;
 			var page3 = panel.transform.Find("Objetos_3").gameObject;
 			var page4 = panel.transform.Find("Objetos_4").gameObject;
@@ -179,7 +217,7 @@ public class StoreManager : MonoBehaviour
     	{
 			pagina_actual -= 1;
 			
-			var page1 = panel.transform.Find("Objetos").gameObject;
+			var page1 = panel.transform.Find("Objetos_1").gameObject;
 			var page2 = panel.transform.Find("Objetos_2").gameObject;
 			var page3 = panel.transform.Find("Objetos_3").gameObject;
 			var page4 = panel.transform.Find("Objetos_4").gameObject;
