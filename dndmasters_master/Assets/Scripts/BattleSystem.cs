@@ -150,7 +150,7 @@ public class BattleSystem : MonoBehaviour
 
             pLifeBarImage.fillAmount = playerLife / maxLife;
             eLifeBarImage.fillAmount = enemyLife / maxLife;
-        } else if (enemyScore == (float)-1 && myScore != -1) {
+        } else if (enemyScore == (float)-1 && myScore != (float)-1) {
             hudCanvas.SetActive( false );
             selectCanvas.SetActive( false );
             waitCanvas.SetActive( true );
@@ -186,6 +186,7 @@ public class BattleSystem : MonoBehaviour
 
             pLifeBarImage.fillAmount = playerLife / maxLife;
             eLifeBarImage.fillAmount = enemyLife / maxLife;
+            Debug.Log("Points: " + playerLife + ", " + enemyLife + " | " + pLifeBarImage.fillAmount + ", " + eLifeBarImage.fillAmount);
         }
     }
 
